@@ -32,11 +32,19 @@
   box-sizing: border-box;
 }
 
+/* APP */
+.App {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.App > * {
+  border: 1px solid #000;
+}
+
 /* PRODUCT VIEW */
 
 .productView {
   height: 100vh;
-  width: 80vw;
   background: rgb(255, 255, 255);
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 252, 244, 1) 29%, rgba(253, 238, 176, 1) 100%);
   font-family: var(--font-1);
@@ -111,6 +119,14 @@
   height: 1.7rem;
   font-size: 1.1rem;
   font-family: var(--font-1);
+}
+
+.plusBtn {
+  line-height: 1.6rem;
+}
+
+.singleProductButtons button:hover {
+  background-color: #e2e2e2;
 }
 
 .singleProductButtons .addBtn {
