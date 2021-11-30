@@ -15,14 +15,16 @@ export default function Product(props) {
         backgroundColor: color,
       }}
     >
-      <img src={`../beer-images/${props.label}`} alt={props.label} className="beerImage" />
-      {/* <img src={image} alt="img" className="beerImage" /> */}
-      <h2>{props.name}</h2>
-      <div className="beer-price">
-        <h3>{props.category}</h3>
-        <div className="line">|</div>
-        <p>50,-</p>
-      </div>
+      <a href="#">
+        <img src={`../beer-images/${props.label}`} alt={props.label} className="beerImage" />
+        {/* <img src={image} alt="img" className="beerImage" /> */}
+        <h2>{props.name}</h2>
+        <div className="beer-price">
+          <h3>{props.category}</h3>
+          <div className="line">|</div>
+          <p>50,-</p>
+        </div>
+      </a>
       <div className="addBasket">
         <button className="addToBasket" onClick={handleClick}>
           Add to basket

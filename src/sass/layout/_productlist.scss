@@ -23,6 +23,11 @@ nav {
     margin: 1rem;
     border-radius: 10px;
     box-shadow: 0.7px 0.5px 1.6px rgba(0, 0, 0, 0.057), 2.2px 1.6px 5.4px rgba(0, 0, 0, 0.083), 10px 7px 24px rgba(0, 0, 0, 0.14);
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
   }
 
   .beer-price {
