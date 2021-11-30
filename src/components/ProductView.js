@@ -1,6 +1,11 @@
 export default function ProductView(props) {
   return (
     <div className="productView">
+      <div className="backArrow" onClick={props.handleClose}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+          <path id="Icon_material-arrow_back" data-name="Icon material-arrow_back" d="M30,16.5H11.745L20.13,8.115,18,6,6,18,18,30l2.115-2.115L11.745,19.5H30Z" transform="translate(-6 -6)" />
+        </svg>
+      </div>
       <div className="productContainer">
         <div className="productPhoto">
           <img src={`../beer-images/${props.label}`} />

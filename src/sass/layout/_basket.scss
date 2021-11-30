@@ -1,0 +1,70 @@
+@use "../base/variables";
+
+.listItem {
+  list-style: none;
+  margin-left: -3rem;
+  font-family: variables.$font-1;
+
+  .basketItem {
+    display: flex;
+
+    .deleteItem {
+      position: fixed;
+      right: 1.5rem;
+      font-size: 1.8rem;
+      cursor: pointer;
+      &:hover {
+        color: rgb(201, 79, 79);
+      }
+    }
+
+    .basketImg {
+      width: 8rem;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .itemInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-left: -1rem;
+      margin-top: 0.5rem;
+
+      h3 {
+        font-family: variables.$font-2;
+        font-size: 1.5rem;
+        font-weight: 100;
+      }
+
+      .itemButtons {
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+
+        button {
+          height: fit-content;
+          background-color: transparent;
+          border: solid 2px #000;
+          border-radius: 4px;
+          &:hover {
+            background-color: #e2e2e2;
+          }
+        }
+
+        .plusBtn {
+          line-height: initial;
+        }
+      }
+    }
+
+    .itemTotalPrice {
+      margin-left: 3.5rem;
+      margin-top: 5rem;
+      font-weight: 900;
+      font-size: 1.3rem;
+    }
+  }
+}
