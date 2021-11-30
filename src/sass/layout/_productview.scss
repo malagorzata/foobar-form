@@ -1,0 +1,105 @@
+@use "../base/variables";
+
+.productView {
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 252, 244, 1) 29%, rgba(253, 238, 176, 1) 100%);
+  font-family: variables.$font-1;
+  font-size: 1.1rem;
+}
+
+.productContainer {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.productPhoto {
+  width: 65rem;
+}
+
+.productPhoto img {
+  max-width: 100%;
+}
+
+.productInfo h1 {
+  font-family: variables.$font-2;
+  font-weight: normal;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.7rem;
+}
+
+.perCountry {
+  margin-bottom: 1rem;
+}
+
+.qualities {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.quality {
+  border: 2px solid variables.$color3;
+  border-radius: 10rem;
+  padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+}
+
+.productDesc {
+  width: 80%;
+  line-height: 1.8rem;
+  text-align: justify;
+  margin-bottom: 3rem;
+}
+
+.productVPrice {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.4rem;
+}
+
+.singleProductButtons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.singleProductButtons button {
+  background-color: transparent;
+  border: solid 2px black;
+  border-radius: 3px;
+  width: 1.7rem;
+  height: 1.7rem;
+  font-size: 1.1rem;
+  font-family: variables.$font-1;
+}
+
+.plusBtn {
+  line-height: 1.6rem;
+}
+
+.singleProductButtons button:hover {
+  background-color: #e2e2e2;
+}
+
+.singleProductButtons .addBtn {
+  width: fit-content;
+  height: fit-content;
+  background-color: #f9e8b1;
+  border-color: transparent;
+  border-radius: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.7rem 1rem 0.5rem 1rem;
+  margin-left: 2rem;
+  transition: 0.2s ease-in-out;
+}
+
+.singleProductButtons .addBtn:hover {
+  background-color: #f3da87;
+  transition: 0.2s ease-in-out;
+}

@@ -1,4 +1,5 @@
-import "./App.css";
+import "./sass/style.scss";
+
 import { useState, useEffect } from "react";
 
 import Nav from "./components/Nav";

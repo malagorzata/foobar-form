@@ -1,0 +1,59 @@
+@use "../base/variables";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 3.2fr 0.8fr;
+}
+.App > * {
+  border: 1px solid #000;
+}
+
+nav {
+  grid-column: 1/-1;
+}
+.ProductList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 50px));
+  article {
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0.7px 0.5px 1.6px rgba(0, 0, 0, 0.057), 2.2px 1.6px 5.4px rgba(0, 0, 0, 0.083), 10px 7px 24px rgba(0, 0, 0, 0.14);
+  }
+
+  .beer-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+  }
+
+  .beer-price > * {
+    margin: 0;
+    padding: 0 0.3rem;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: variables.$font-2;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  h3 {
+    font-family: variables.$font-1;
+    font-weight: normal;
+    font-size: 0.8rem;
+  }
+}
+
+.beerImage {
+  width: 100%;
+  grid-template-columns: 3fr 1fr;
+}

@@ -24,7 +24,9 @@ export default function Product(props) {
         <p>50,-</p>
       </div>
       <div className="addBasket">
-        <button onClick={handleClick}>Add to basket </button>
+        <button className="addToBasket" onClick={handleClick}>
+          Add to basket
+        </button>
       </div>
     </article>
   );
