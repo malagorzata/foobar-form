@@ -40,12 +40,6 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <button className="full-bleed" onClick={addProduct}>
-        Add Product
-      </button>
-      <button onClick={addToBasket} className="full-bleed">
-        Add to basket
-      </button>
 
       <ProductList addToBasket={addToBasket} products={productCopy} break="hell yeah" />
       <Basket basket={basket} />

@@ -35,7 +35,7 @@
 /* APP */
 .App {
   display: grid;
-  grid-template-columns: 3.2fr 0.8fr;
+  grid-template-columns: 2fr 2fr;
 }
 .App > * {
   border: 1px solid #000;
@@ -45,19 +45,7 @@ nav {
 }
 .ProductList {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.open {
-  display: initial;
-}
-.closed {
-  display: none;
-}
-
-article {
-  margin: 1rem;
-  border-radius: 10px;
-  box-shadow: 0.7px 0.5px 1.6px rgba(0, 0, 0, 0.057), 2.2px 1.6px 5.4px rgba(0, 0, 0, 0.083), 10px 7px 24px rgba(0, 0, 0, 0.14);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 50px));
 }
 
 .beer-price {
