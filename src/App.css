@@ -65,19 +65,28 @@ article {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 0.6rem;
 }
 
 .beer-price > * {
   margin: 0;
-  padding: 0;
+  padding: 0 0.3rem;
 }
 
 h2 {
   text-align: center;
   margin: 0;
   padding: 0;
+  font-family: var(--font-2);
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 
+h3 {
+  font-family: var(--font-1);
+  font-weight: normal;
+  font-size: 1rem;
+}
 button {
   border: none;
   background-color: white;
