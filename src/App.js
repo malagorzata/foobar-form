@@ -43,9 +43,9 @@ function App() {
 
       <ProductList addToBasket={addToBasket} products={productCopy} break="hell yeah" />
       <Basket basket={basket} />
-      <main>
+      {/* <main>
         <ProductView />
-      </main>
+      </main> */}
     </div>
   );
 }
