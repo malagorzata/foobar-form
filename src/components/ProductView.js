@@ -3,7 +3,7 @@ export default function ProductView() {
     <div className="productView">
       <div className="productContainer">
         <div className="productPhoto">
-          <img src="../beer-images/el-hefe.png" />
+          <img src="../beer-images/elhefe.png" />
         </div>
         <div className="productInfo">
           <h1>El Hefe</h1>
