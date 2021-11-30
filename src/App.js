@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Nav from "./components/Nav";
 import ProductList from "./components/ProductList";
 import Basket from "./components/Basket";
+import ProductView from "./components/ProductView";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -48,8 +49,10 @@ function App() {
 
       <ProductList addToBasket={addToBasket} products={productCopy} break="hell yeah" />
       <Basket basket={basket} />
+      <main>
+        <ProductView />
+      </main>
     </div>
   );
 }
-
 export default App;

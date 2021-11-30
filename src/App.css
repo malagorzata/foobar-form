@@ -1,3 +1,38 @@
+@font-face {
+  src: url(fonts/Spartan-VariableFont_wght.ttf);
+  font-family: Spartan;
+}
+
+@font-face {
+  src: url(fonts/WayfinderCF-Regular.ttf);
+  font-family: Wayfinder;
+}
+
+:root {
+  --color1: #a2e34c;
+  --color2: #e9ef39;
+  --color3: #fed13d;
+  --color4: #ffcbbb;
+  --color5: #ff8f8f;
+  --color6: #c1f9ff;
+  --color7: #aec1ff;
+  --color7: #efacff;
+  --color8: #ffbb87;
+  --color9: #caabff;
+  --color10: #a5ffda;
+
+  --font-1: Spartan;
+  --font-2: Wayfinder;
+  --color-font: #000;
+  --color-font2: #fff;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* APP */
 .App {
   display: grid;
   grid-template-columns: 3.2fr 0.8fr;
@@ -58,4 +93,114 @@ button {
 
 .beerImage {
   width: 100%;
+  grid-template-columns: 3fr 1fr;
+}
+.App > * {
+  border: 1px solid #000;
+}
+
+/* PRODUCT VIEW */
+
+.productView {
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 252, 244, 1) 29%, rgba(253, 238, 176, 1) 100%);
+  font-family: var(--font-1);
+  font-size: 1.1rem;
+}
+
+.productContainer {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.productPhoto {
+  width: 65rem;
+}
+
+.productPhoto img {
+  max-width: 100%;
+}
+
+.productInfo h1 {
+  font-family: var(--font-2);
+  font-weight: normal;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.7rem;
+}
+
+.perCountry {
+  margin-bottom: 1rem;
+}
+
+.qualities {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.quality {
+  border: 2px solid var(--color3);
+  border-radius: 10rem;
+  padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+}
+
+.productDesc {
+  width: 80%;
+  line-height: 1.8rem;
+  text-align: justify;
+  margin-bottom: 3rem;
+}
+
+.productVPrice {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.4rem;
+}
+
+.singleProductButtons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.singleProductButtons button {
+  background-color: transparent;
+  border: solid 2px black;
+  border-radius: 3px;
+  width: 1.7rem;
+  height: 1.7rem;
+  font-size: 1.1rem;
+  font-family: var(--font-1);
+}
+
+.plusBtn {
+  line-height: 1.6rem;
+}
+
+.singleProductButtons button:hover {
+  background-color: #e2e2e2;
+}
+
+.singleProductButtons .addBtn {
+  width: fit-content;
+  height: fit-content;
+  background-color: #f9e8b1;
+  border-color: transparent;
+  border-radius: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.7rem 1rem 0.5rem 1rem;
+  margin-left: 2rem;
+  transition: 0.2s ease-in-out;
+}
+
+.singleProductButtons .addBtn:hover {
+  background-color: #f3da87;
+  transition: 0.2s ease-in-out;
 }
