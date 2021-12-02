@@ -1,9 +1,26 @@
+@use "../base/variables";
+
 .addToBasket {
   border: none;
   background-color: white;
-  box-shadow: 0.4px 0.1px 1.6px rgba(0, 0, 0, 0.057), 1.3px 0.4px 5.4px rgba(0, 0, 0, 0.083), 6px 2px 24px rgba(0, 0, 0, 0.14);
-  padding: 0.5rem;
+  -webkit-box-shadow: 6px 6px 10px -9px rgba(91, 196, 207, 0.58);
+  -moz-box-shadow: 6px 6px 10px -9px rgba(91, 196, 207, 0.58);
+  box-shadow: 6px 6px 10px -9px rgba(91, 196, 207, 0.58);
+  padding: 0.5rem 0.8rem;
   border-radius: 5px;
+  border: 1px solid #5bc4cf;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.7rem;
+  font-family: variables.$font-1;
+  // color: variables.$color-button;
+  color: variables.$color-button;
+  font-weight: 700;
+
+  &:hover {
+    border: 1px solid #5bc4cf;
+    background-color: #5bc4cf;
+    color: white;
+  }
 }
 
 .addBasket {

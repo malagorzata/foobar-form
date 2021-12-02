@@ -29,13 +29,13 @@ export default function Product(props) {
           <h2>{props.name}</h2>
           <div className="beer-price">
             <h3>{props.category}</h3>
-            <div className="line">|</div>
-            <p>50,-</p>
+            <div className="line"></div>
+            <p>50 dkk</p>
           </div>
         </a>
         <div className="addBasket">
           <button className="addToBasket" onClick={handleClick}>
-            Add to basket
+            ADD TO BASKET
           </button>
         </div>
       </article>

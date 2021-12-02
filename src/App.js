@@ -2,7 +2,6 @@ import "./sass/style.scss";
 
 import { useState, useEffect } from "react";
 
-import Nav from "./components/Nav";
 import ProductList from "./components/ProductList";
 import Basket from "./components/Basket";
 import ProductView from "./components/ProductView";
@@ -40,8 +39,6 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
-
       <ProductList addToBasket={addToBasket} products={productCopy} />
       <Basket basket={basket} />
       {/* <main>

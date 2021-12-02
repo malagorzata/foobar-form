@@ -8,24 +8,41 @@
 .App {
   display: grid;
   grid-template-columns: 3.2fr 0.8fr;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 253, 249, 1) 59%, rgba(255, 253, 249, 1) 100%);
 }
 
 nav {
-  grid-column: 1/-1;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.3rem;
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: variables.$font-1;
+    font-size: 2.5rem;
+  }
 }
+
 .ProductList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 50px));
-  background-color: variables.$color-background;
+  padding-left: 2rem;
+  margin-top: 1.2rem;
 
   article {
     margin: 1rem;
     border-radius: 10px;
-    box-shadow: 0.7px 0.5px 1.6px rgba(0, 0, 0, 0.057), 2.2px 1.6px 5.4px rgba(0, 0, 0, 0.083), 10px 7px 24px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1);
+    -moz-box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1);
+    box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1);
 
     .beerView {
       text-decoration: none;
       color: #000;
+      cursor: pointer;
+
       h2 {
         text-align: center;
         margin: 0;
@@ -38,6 +55,20 @@ nav {
         font-family: variables.$font-1;
         font-weight: normal;
         font-size: 0.8rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        font-family: variables.$font-1;
+        font-weight: 800;
+        font-size: 0.8rem;
+      }
+
+      .line {
+        border-left: 1px solid black;
+        height: 20px;
+        margin: 0 0.5rem;
       }
     }
   }
@@ -52,7 +83,7 @@ nav {
 
   .beer-price > * {
     margin: 0;
-    padding: 0 0.3rem;
+    // padding: 0 0.3rem;
   }
 }
 
@@ -65,10 +96,16 @@ nav {
   h1 {
     font-family: variables.$font-1;
     font-size: 1.7rem;
+    padding: 0.5rem 2rem;
+    margin: 0 1rem;
+    color: #2b2b2b;
   }
   h2 {
     font-family: variables.$font-1;
     font-weight: 100;
     font-size: 1.2rem;
+    padding: 0.3rem 2rem;
+    margin: 0 1rem;
+    color: 242424;
   }
 }
