@@ -1,4 +1,24 @@
+import React, { useState } from "react";
+
 export default function ProductView(props) {
+  const [amount, setAmount] = useState(0);
+
+  //adding to cart functions
+
+  //first select quantity
+  function minus() {
+    setAmount((oldAmount) => {
+      if (oldAmount > 0) {
+        return oldAmount - 1;
+      }
+      return 0;
+    });
+  }
+
+  function plus() {
+    setAmount((oldAmount) => oldAmount + 1);
+  }
+
   return (
     <div className="productView">
       <div className="backArrow" onClick={props.handleClose}>
@@ -23,9 +43,15 @@ export default function ProductView(props) {
           <div className="productDesc">{props.description.overallImpression}</div>
           <div className="productVPrice">40dkk</div>
           <div className="singleProductButtons">
-            <button className="minusBtn">-</button>
-            <p>2</p>
-            <button className="plusBtn">+</button>
+            <div className="plusMinusBtn">
+              <button onClick={minus} disabled={props.soldout || amount === 0} className="minusBtn">
+                -
+              </button>
+              <p>{amount}</p>
+              <button onClick={plus} disabled={props.soldout} className="plusBtn">
+                +
+              </button>
+            </div>
             <button className="addBtn">add to cart</button>
           </div>
         </div>

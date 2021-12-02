@@ -4,6 +4,7 @@
 .basketContainer {
   position: fixed;
   right: 0;
+  z-index: 3;
   width: 21rem;
   height: 100vh;
   overflow-y: scroll;
