@@ -42,7 +42,7 @@ function App() {
     <div className="App">
       <Nav />
 
-      <ProductList addToBasket={addToBasket} products={productCopy} break="hell yeah" />
+      <ProductList addToBasket={addToBasket} products={productCopy} />
       <Basket basket={basket} />
       {/* <main>
         <ProductView />

@@ -23,7 +23,7 @@ export default function Product(props) {
           backgroundColor: color,
         }}
       >
-        <a onClick={toggleProduct}>
+        <a className="beerView" onClick={toggleProduct}>
           <img src={`../beer-images/${props.label}`} alt={props.label} className="beerImage" />
           {/* <img src={image} alt="img" className="beerImage" /> */}
           <h2>{props.name}</h2>

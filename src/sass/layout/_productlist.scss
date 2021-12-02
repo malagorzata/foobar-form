@@ -9,9 +9,6 @@
   display: grid;
   grid-template-columns: 3.2fr 0.8fr;
 }
-.App > * {
-  border: 1px solid #000;
-}
 
 nav {
   grid-column: 1/-1;
@@ -19,14 +16,29 @@ nav {
 .ProductList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 50px));
+  background-color: variables.$color-background;
+
   article {
     margin: 1rem;
     border-radius: 10px;
     box-shadow: 0.7px 0.5px 1.6px rgba(0, 0, 0, 0.057), 2.2px 1.6px 5.4px rgba(0, 0, 0, 0.083), 10px 7px 24px rgba(0, 0, 0, 0.14);
 
-    a {
+    .beerView {
       text-decoration: none;
       color: #000;
+      h2 {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-family: variables.$font-2;
+        font-weight: normal;
+        letter-spacing: 1px;
+      }
+      h3 {
+        font-family: variables.$font-1;
+        font-weight: normal;
+        font-size: 0.8rem;
+      }
     }
   }
 
@@ -42,23 +54,21 @@ nav {
     margin: 0;
     padding: 0 0.3rem;
   }
-
-  h2 {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-family: variables.$font-2;
-    font-weight: normal;
-    letter-spacing: 1px;
-  }
-  h3 {
-    font-family: variables.$font-1;
-    font-weight: normal;
-    font-size: 0.8rem;
-  }
 }
 
 .beerImage {
   width: 100%;
   grid-template-columns: 3fr 1fr;
+}
+
+.productListHead {
+  h1 {
+    font-family: variables.$font-1;
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-family: variables.$font-1;
+    font-weight: 100;
+    font-size: 1.2rem;
+  }
 }
