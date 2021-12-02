@@ -5,7 +5,13 @@ export default function MyBasket(props) {
     <div>
       <ul className="basketList">
         <BasketItem />
+        <BasketItem />
       </ul>
+      <div className="paymentLine"></div>
+      <div className="totalBasket">
+        <p>Total:</p>
+        <div className="totalPrice">240,-</div>
+      </div>
     </div>
   );
 }

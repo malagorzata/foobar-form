@@ -7,11 +7,11 @@
 
 .App {
   display: grid;
-  grid-template-columns: 3.2fr 0.8fr;
+  grid-template-columns: 3.1fr 0.8fr;
 }
-.App > * {
+/* .App > * {
   border: 1px solid #000;
-}
+} */
 
 nav {
   grid-column: 1/-1;
