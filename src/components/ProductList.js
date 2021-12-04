@@ -1,7 +1,10 @@
 import Product from "./Product";
+
 export default function ProductList(props) {
-  console.log(props);
-  const mapped = props.products.map((product) => <Product key={product.id} {...product} />);
+  /* console.log(props.addToBasket); */
+
+  const mapped = props.products.map((product) => <Product addToBasket={props.addToBasket} key={product.name + Math.floor(Math.random())} {...product} />);
+
   return (
     <section>
       <h1>Product List {props.break}</h1>

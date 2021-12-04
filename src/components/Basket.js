@@ -5,7 +5,7 @@ export default function Basket(props) {
   return (
     <aside className="basketContainer">
       <h2>Your basket</h2>
-      <MyBasket {...props} />
+      <MyBasket basket={props.basket} {...props} />
       <PaymentMethod />
     </aside>
   );

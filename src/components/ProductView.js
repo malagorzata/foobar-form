@@ -1,11 +1,27 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addItemToBasket } from "../features/basket/basketSlice";
 
 export default function ProductView(props) {
+  //console.log(props.addToBasket);
+
   const [amount, setAmount] = useState(0);
+  const dispatch = useDispatch();
 
   //adding to cart functions
+  function minus() {
+    if (amount <= 0) return;
 
-  //first select quantity
+    const newAmount = amount - 1;
+    setAmount(newAmount);
+  }
+
+  function plus() {
+    const newAmount = amount + 1;
+    setAmount(newAmount);
+  }
+
+  /*   //first select quantity
   function minus() {
     setAmount((oldAmount) => {
       if (oldAmount > 0) {
@@ -17,7 +33,7 @@ export default function ProductView(props) {
 
   function plus() {
     setAmount((oldAmount) => oldAmount + 1);
-  }
+  } */
 
   return (
     <div className="productView">
@@ -52,7 +68,14 @@ export default function ProductView(props) {
                 +
               </button>
             </div>
-            <button className="addBtn">add to cart</button>
+            <button
+              onClick={() => {
+                dispatch(addItemToBasket({ props, amount }));
+              }}
+              className="addBtn"
+            >
+              add to basket
+            </button>
           </div>
         </div>
       </div>
