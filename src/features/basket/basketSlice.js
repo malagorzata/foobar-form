@@ -12,9 +12,11 @@ export const slice = createSlice({
 
       state.basketItems.push({
         id: itemID,
+        img: action.payload.props.label,
         name: action.payload.props.name,
-        amount: action.payload.props.amount,
-        price: action.payload.props.amount + action.payload.props.alc,
+        price: 40,
+        amount: action.payload.amount, //How do i get the amount from product view??
+        totalPrice: 40 * action.payload.amount,
       });
     },
   },
