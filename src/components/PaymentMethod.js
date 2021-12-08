@@ -30,7 +30,7 @@ export default function PaymentMethod(props) {
         </div>
       </div>
       <Link className="checkoutBtn" to="/payment">
-        checkout
+        CHECKOUT{" "}
       </Link>
     </div>
   );
