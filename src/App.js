@@ -30,22 +30,22 @@ function App() {
   // }
 
   const productCopy = [...products];
-  productCopy.sort((a, b) => {
-    if (a.productdisplayname > b.productdisplayname) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  // productCopy.sort((a, b) => {
+  //   if (a.productdisplayname > b.productdisplayname) {
+  //     return 1;
+  //   } else {
+  //     return -1;
+  //   }
+  // });
 
   return (
     <div className="App">
       <ProductList products={productCopy} />
       <Basket basket={basket} />
       <PaymentSection />
-
-      {/* <Routes>
-        <Route path="/" element={<ProductList addToBasket={addToBasket} products={productCopy} />} />
+      {/* 
+      <Routes>
+        <Route path="/" element={<ProductList products={productCopy} />} />
         <Route path="/" element={<Basket basket={basket} />} />
         <Route path="/payment" element={<PaymentSection />} />
       </Routes> */}
