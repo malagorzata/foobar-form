@@ -72,72 +72,68 @@ class PaymentForm extends React.Component {
 
   render() {
     return (
-      <section id="payment_section">
-        <CheckoutView />
-
-        <div id="payment_form">
-          <div className="">
-            <Cards cvc={this.state.cvc} expiry={this.state.expiry} focused={this.state.focus} name={this.state.name} number={this.state.number} />
-          </div>
-          <div className="card_container">
-            <form onSubmit={this.handleSubmit}>
-              <div className="form-control">
-                <label htmlFor="name">Name on the card</label>
-                <Input name="name" type="text" placeholder="Enter your full name" minLength="2" value={this.name} required onChange={this.handleInputChange} onFocus={this.handleInputFocus} onBlur={this.handleNameValid} />
-                <p className={`${this.state.nameValid ? "hidden" : "errormessage"}`}>Please enter your full name</p>
-              </div>
-
-              <div className="form-control">
-                <label htmlFor="cardnumber">Card number</label>
-                <InputMask
-                  name="number"
-                  id="cardnumber"
-                  placeholder="Enter your card no."
-                  type="text"
-                  required
-                  mask="9999 9999 9999 9999"
-                  value={this.number}
-                  maskChar=""
-                  className={`ant-input ${this.state.cardnumberValid ? "" : "custom"}`}
-                  onChange={this.handleInputChange}
-                  onBlur={this.handleCreditCardValid}
-                ></InputMask>
-                <p className={`${this.state.cardnumberValid ? "hidden" : "errormessage"}`}>Please enter a valid CC number</p>
-              </div>
-
-              <div className="form-group">
-                <div className="form-control">
-                  <label htmlFor="monthyear">Expiry date</label>
-                  <InputMask
-                    name="expiry"
-                    id="monthyear"
-                    mask="99/99"
-                    type="text"
-                    placeholder="MM/YY"
-                    className={`ant-input ${this.state.dateValid ? "" : "custom"}`}
-                    maskChar=""
-                    required
-                    value={this.monthyear}
-                    onBlur={this.handleDateValid}
-                    onChange={this.handleInputChange}
-                    onFocus={this.handleInputFocus}
-                  ></InputMask>
-                  <p className={`${this.state.dateValid ? "hidden" : "errormessage"}`}>Please enter mm/yy</p>{" "}
-                </div>
-
-                <div className="form-control">
-                  <label htmlFor="cvc">CVC</label>
-                  <input type="tel" minLength="3" maxLength="3" name="cvc" className="form-control" placeholder="CVC" pattern="\d{3,4}" required onChange={this.handleInputChange} onFocus={this.handleInputFocus} onBlur={this.handleCVCValid} />
-                  <p className={`${this.state.cvcValid ? "hidden" : "errormessage"}`}>Enter CVC code</p>
-                </div>
-              </div>
-            </form>
-            <button type="submit" className="payNow">
-              PAY NOW
-            </button>
-          </div>
+      <div id="payment_form">
+        <div className="">
+          <Cards cvc={this.state.cvc} expiry={this.state.expiry} focused={this.state.focus} name={this.state.name} number={this.state.number} />
         </div>
-      </section>
+        <div className="card_container">
+          <form onSubmit={this.handleSubmit}>
+            <div className="form-control">
+              <label htmlFor="name">Name on the card</label>
+              <Input name="name" type="text" placeholder="Enter your full name" minLength="2" value={this.name} required onChange={this.handleInputChange} onFocus={this.handleInputFocus} onBlur={this.handleNameValid} />
+              <p className={`${this.state.nameValid ? "hidden" : "errormessage"}`}>Please enter your full name</p>
+            </div>
+
+            <div className="form-control">
+              <label htmlFor="cardnumber">Card number</label>
+              <InputMask
+                name="number"
+                id="cardnumber"
+                placeholder="Enter your card no."
+                type="text"
+                required
+                mask="9999 9999 9999 9999"
+                value={this.number}
+                maskChar=""
+                className={`ant-input ${this.state.cardnumberValid ? "" : "custom"}`}
+                onChange={this.handleInputChange}
+                onBlur={this.handleCreditCardValid}
+              ></InputMask>
+              <p className={`${this.state.cardnumberValid ? "hidden" : "errormessage"}`}>Please enter a valid CC number</p>
+            </div>
+
+            <div className="form-group">
+              <div className="form-control">
+                <label htmlFor="monthyear">Expiry date</label>
+                <InputMask
+                  name="expiry"
+                  id="monthyear"
+                  mask="99/99"
+                  type="text"
+                  placeholder="MM/YY"
+                  className={`ant-input ${this.state.dateValid ? "" : "custom"}`}
+                  maskChar=""
+                  required
+                  value={this.monthyear}
+                  onBlur={this.handleDateValid}
+                  onChange={this.handleInputChange}
+                  onFocus={this.handleInputFocus}
+                ></InputMask>
+                <p className={`${this.state.dateValid ? "hidden" : "errormessage"}`}>Please enter mm/yy</p>{" "}
+              </div>
+
+              <div className="form-control">
+                <label htmlFor="cvc">CVC</label>
+                <input type="tel" minLength="3" maxLength="3" name="cvc" className="form-control" placeholder="CVC" pattern="\d{3,4}" required onChange={this.handleInputChange} onFocus={this.handleInputFocus} onBlur={this.handleCVCValid} />
+                <p className={`${this.state.cvcValid ? "hidden" : "errormessage"}`}>Enter CVC code</p>
+              </div>
+            </div>
+          </form>
+          <button type="submit" className="payNow">
+            PAY NOW
+          </button>
+        </div>
+      </div>
     );
   }
 }
