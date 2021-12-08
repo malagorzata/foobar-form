@@ -1,18 +1,9 @@
 import { useState } from "react";
 import ProductView from "./ProductView";
 
-import { Link } from "react-router-dom";
-
 // import image from "../beer-images/elhefe.png";
 export default function Product(props) {
   /* console.log(props.addToBasket); */
-
-  const [setMessage] = useState("hi mom");
-
-  const color = props.soldOut ? "red" : "white";
-  function handleClick() {
-    setMessage((prevState) => prevState + " and dad");
-  }
 
   /* for showing the selected product */
   const [shown, showProduct] = useState(false);
@@ -22,11 +13,7 @@ export default function Product(props) {
 
   return (
     <div>
-      <article
-        style={{
-          backgroundColor: color,
-        }}
-      >
+      <article>
         <a className="beerView" onClick={toggleProduct}>
           <img src={`../beer-images/${props.label}`} alt={props.label} className="beerImage" />
           {/* <img src={image} alt="img" className="beerImage" /> */}
@@ -38,11 +25,7 @@ export default function Product(props) {
           </div>
         </a>
         <div className="addBasket">
-          <Link to="/payment">
-            <button className="addToBasket" onClick={handleClick}>
-              ADD TO BASKET
-            </button>
-          </Link>
+          <button className="addToBasket">ADD TO BASKET</button>
         </div>
       </article>
       {shown && <ProductView addToBasket={props.addToBasket} handleClose={toggleProduct} {...props} />}

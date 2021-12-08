@@ -22,12 +22,12 @@ function App() {
   });
 
   //BASKET FUNCTIONS
-  function addToBasket(product) {
-    setBasket(function (oldBasket) {
-      const nextState = oldBasket.concat(product);
-      return nextState;
-    });
-  }
+  // function addToBasket(product) {
+  //   setBasket(function (oldBasket) {
+  //     const nextState = oldBasket.concat(product);
+  //     return nextState;
+  //   });
+  // }
 
   const productCopy = [...products];
   productCopy.sort((a, b) => {
@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <ProductList addToBasket={addToBasket} products={productCopy} />
+      <ProductList products={productCopy} />
       <Basket basket={basket} />
       <PaymentSection />
 
