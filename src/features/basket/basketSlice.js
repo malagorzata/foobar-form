@@ -8,16 +8,20 @@ export const slice = createSlice({
   reducers: {
     addItemToBasket: (state, action) => {
       //generating unique id for item
-      const itemID = Math.floor(Math.random());
+      const id = new Date().getTime(); //generate id for basket item
 
       state.basketItems.push({
-        id: itemID,
+        id: id,
         img: action.payload.props.label,
         name: action.payload.props.name,
         price: 50,
-        amount: action.payload.amount, //How do i get the amount from product view??
+        amount: action.payload.amount,
         totalPrice: 50 * action.payload.amount,
       });
+    },
+    removeItemFromBasket: (state, action) => {
+      console.log("delete");
+      state.basketItems = state.basketItems.filter((basketItem) => basketItem.id !== action.payload.basketItemId);
     },
   },
 });
@@ -30,6 +34,6 @@ export const getTotalPrice = (state) => {
   }, 0);
 };
 
-export const { addItemToBasket } = slice.actions;
+export const { addItemToBasket, removeItemFromBasket } = slice.actions;
 
 export default slice.reducer;
