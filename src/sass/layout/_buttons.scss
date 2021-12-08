@@ -8,7 +8,6 @@
   -webkit-box-shadow: 6px 6px 10px -9px rgba(91, 196, 207, 0.58);
   -moz-box-shadow: 6px 6px 10px -9px rgba(91, 196, 207, 0.58);
   box-shadow: 6px 6px 10px -9px rgba(91, 196, 207, 0.58);
-  padding: 0.5rem 0.8rem;
   border-radius: 5px;
   border: 1px solid #5bc4cf;
   margin: 0.5rem 0 1rem 0;
@@ -16,6 +15,7 @@
   // color: variables.$color-button;
   color: variables.$color-button;
   font-weight: 700;
+  text-decoration: none;
 
   &:hover {
     border: 1px solid #5bc4cf;
@@ -28,15 +28,19 @@
   align-self: flex-end;
   margin: 1rem 0rem;
   font-size: 0.7rem;
+  padding: 0.5rem 0.8rem;
 }
 
 .addBasket {
   display: flex;
   justify-content: center;
   font-size: 0.7rem;
+  padding: 0.5rem 0.8rem;
 }
 
 .editOrder {
   width: 7rem;
   font-size: 0.6rem;
+  padding: 0.5rem;
+  padding-left: 1.4rem;
 }
