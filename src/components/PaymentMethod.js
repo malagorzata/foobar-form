@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function PaymentMethod(props) {
   return (
     <div className="paymentMethod">
@@ -27,7 +29,9 @@ export default function PaymentMethod(props) {
           <img src="../images/mobilepay-logo.svg" />
         </div>
       </div>
-      <button className="checkoutBtn">checkout</button>
+      <Link className="checkoutBtn" to="/payment">
+        checkout
+      </Link>
     </div>
   );
 }

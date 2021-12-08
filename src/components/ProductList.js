@@ -3,7 +3,7 @@ import Nav from "./Nav";
 
 export default function ProductList(props) {
   /* console.log(props.addToBasket); */
-
+  console.log(props);
   const mapped = props.products.map((product) => <Product addToBasket={props.addToBasket} key={product.name + Math.floor(Math.random())} {...product} />);
 
   return (

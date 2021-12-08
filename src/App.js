@@ -7,6 +7,7 @@ import Basket from "./components/Basket";
 import ProductView from "./components/ProductView";
 import { Routes, Route, Link } from "react-router-dom";
 import PaymentSection from "./components/PaymentSection";
+import Product from "./components/Product";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -40,16 +41,24 @@ function App() {
 
   return (
     <div className="App">
-      <ProductList products={productCopy} />
+      {/* <ProductList products={productCopy} />
       <Basket basket={basket} />
-      <PaymentSection />
-      {/* 
+      <PaymentSection /> */}
+
       <Routes>
-        <Route path="/" element={<ProductList products={productCopy} />} />
-        <Route path="/" element={<Basket basket={basket} />} />
+        <Route path="/" element={<Wrapper products={productCopy} basket={basket} />} />
         <Route path="/payment" element={<PaymentSection />} />
-      </Routes> */}
+      </Routes>
     </div>
   );
 }
+const Wrapper = (props) => {
+  console.log(props);
+  return (
+    <>
+      <ProductList products={props.products} />
+      <Basket basket={props.basket} />
+    </>
+  );
+};
 export default App;
