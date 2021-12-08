@@ -4,7 +4,6 @@ export default function PaymentBasketItems(props) {
   return (
     <div id="orders">
       <PaymentOrder {...props} />
-
       <section id="finalOrderPrice">
         <hr></hr>
         <div className="orderPrice">

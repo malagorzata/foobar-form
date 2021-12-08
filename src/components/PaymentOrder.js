@@ -14,6 +14,8 @@ export default function PaymentOrder({ basket }) {
 }
 
 function PaymentBasketItem(props) {
+  const totalPrice = 40 * props.amount;
+
   return (
     <article className="fullOrder">
       <img src="../beer-images/elhefe.png" alt="el hefe" className="checkoutImg" />
@@ -21,10 +23,12 @@ function PaymentBasketItem(props) {
         <h2 className="beerNameOrder">{props.name}</h2>
         <p className="beerPriceOrder">40 DKK</p>
         <div className="qtCheckout">
-          <button className="minus"> - </button>2<button className="plus"> + </button>
+          <button className="minus"> - </button>
+          {props.amount}
+          <button className="plus"> + </button>
         </div>
       </div>
-      <p className="finalBeerPrice">80 DKK</p>
+      <p className="finalBeerPrice">{totalPrice} DKK</p>
     </article>
   );
 }
