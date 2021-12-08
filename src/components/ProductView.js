@@ -73,6 +73,7 @@ export default function ProductView(props) {
                 dispatch(addItemToBasket({ props, amount }));
               }}
               className="addBtn"
+              disabled={props.soldout || amount === 0}
             >
               add to basket
             </button>
