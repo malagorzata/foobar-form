@@ -14,15 +14,21 @@ export const slice = createSlice({
         id: itemID,
         img: action.payload.props.label,
         name: action.payload.props.name,
-        price: 40,
+        price: 50,
         amount: action.payload.amount, //How do i get the amount from product view??
-        totalPrice: 40 * action.payload.amount,
+        totalPrice: 50 * action.payload.amount,
       });
     },
   },
 });
 
 export const getBasketItems = (state) => state.basket.basketItems;
+
+export const getTotalPrice = (state) => {
+  return state.basket.basketItems.reduce((total, basketItem) => {
+    return basketItem.totalPrice + total;
+  }, 0);
+};
 
 export const { addItemToBasket } = slice.actions;
 

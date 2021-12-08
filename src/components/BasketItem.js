@@ -18,7 +18,7 @@ export default function BasketItem(props) {
               <button className="plusBtn">+</button>
             </div>
           </div>
-          <div className="itemTotalPrice">{props.basketItem.totalPrice},-</div>
+          <div className="itemTotalPrice">{props.basketItem.totalPrice}dkk</div>
         </div>
       </li>
     </div>

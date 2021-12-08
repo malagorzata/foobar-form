@@ -57,7 +57,7 @@ export default function ProductView(props) {
             <div className="quality 3">bitter</div>
           </div>
           <div className="productDesc">{props.description.overallImpression}</div>
-          <div className="productVPrice">40dkk</div>
+          <div className="productVPrice">50dkk</div>
           <div className="singleProductButtons">
             <div className="plusMinusBtn">
               <button onClick={minus} disabled={props.soldout || amount === 0} className="minusBtn">

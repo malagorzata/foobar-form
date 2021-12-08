@@ -1,9 +1,10 @@
 import BasketItem from "./BasketItem";
 import { useSelector } from "react-redux";
-import { getBasketItems } from "../features/basket/basketSlice";
+import { getBasketItems, getTotalPrice } from "../features/basket/basketSlice";
 
 export default function MyBasket(props) {
   const basketItems = useSelector(getBasketItems);
+  const totalPrice = useSelector(getTotalPrice);
 
   return (
     <div>
@@ -16,7 +17,7 @@ export default function MyBasket(props) {
       <div className="paymentLine"></div>
       <div className="totalBasket">
         <p>Total:</p>
-        <div className="totalPrice">240,-</div>
+        <div className="totalPrice">{totalPrice}dkk</div>
       </div>
     </div>
   );
