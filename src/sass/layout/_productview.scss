@@ -1,11 +1,25 @@
 @use "../base/variables";
 
 .productView {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
   height: 100vh;
+  width: 78%;
   background: rgb(255, 255, 255);
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 252, 244, 1) 29%, rgba(253, 238, 176, 1) 100%);
   font-family: variables.$font-1;
   font-size: 1.1rem;
+}
+
+.backArrow {
+  svg {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    cursor: pointer;
+  }
 }
 
 .productContainer {
@@ -16,19 +30,22 @@
 }
 
 .productPhoto {
-  width: 65rem;
+  width: 100rem;
 }
 
 .productPhoto img {
   max-width: 100%;
 }
 
-.productInfo h1 {
-  font-family: variables.$font-2;
-  font-weight: normal;
-  font-size: 3.5rem;
-  letter-spacing: 3px;
-  margin-bottom: 0.7rem;
+.productInfo {
+  margin-left: -7rem;
+  h1 {
+    font-family: variables.$font-2;
+    font-weight: normal;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.7rem;
+  }
 }
 
 .perCountry {
@@ -66,6 +83,15 @@
   gap: 1rem;
   align-items: center;
   font-size: 1.3rem;
+  .plusMinusBtn {
+    display: flex;
+    gap: 1rem;
+    width: 7.5rem;
+    p {
+      width: 2rem;
+      text-align: center;
+    }
+  }
 }
 
 .singleProductButtons button {

@@ -1,9 +1,23 @@
+import BasketItem from "./BasketItem";
+import { useSelector } from "react-redux";
+import { getBasketItems } from "../features/basket/basketSlice";
+
 export default function MyBasket(props) {
+  const basketItems = useSelector(getBasketItems);
+
   return (
     <div>
-      <h2>Your Basket</h2>
-      <p>{props.basket.length} items</p>
-      <p>$420</p>
+      <ul className="basketList">
+        {/* <BasketItem basket={props.basket} {...props} /> */}
+        {basketItems.map((basketItem) => (
+          <BasketItem basketItem={basketItem} basket={props.basket} {...props} />
+        ))}
+      </ul>
+      <div className="paymentLine"></div>
+      <div className="totalBasket">
+        <p>Total:</p>
+        <div className="totalPrice">240,-</div>
+      </div>
     </div>
   );
 }

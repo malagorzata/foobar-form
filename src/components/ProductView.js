@@ -1,6 +1,47 @@
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addItemToBasket } from "../features/basket/basketSlice";
+
 export default function ProductView(props) {
+  //console.log(props.addToBasket);
+
+  const [amount, setAmount] = useState(0);
+  const dispatch = useDispatch();
+
+  //adding to cart functions
+  function minus() {
+    if (amount <= 0) return;
+
+    const newAmount = amount - 1;
+    setAmount(newAmount);
+  }
+
+  function plus() {
+    const newAmount = amount + 1;
+    setAmount(newAmount);
+  }
+
+  /*   //first select quantity
+  function minus() {
+    setAmount((oldAmount) => {
+      if (oldAmount > 0) {
+        return oldAmount - 1;
+      }
+      return 0;
+    });
+  }
+
+  function plus() {
+    setAmount((oldAmount) => oldAmount + 1);
+  } */
+
   return (
     <div className="productView">
+      <div className="backArrow" onClick={props.handleClose}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+          <path id="Icon_material-arrow_back" data-name="Icon material-arrow_back" d="M30,16.5H11.745L20.13,8.115,18,6,6,18,18,30l2.115-2.115L11.745,19.5H30Z" transform="translate(-6 -6)" />
+        </svg>
+      </div>
       <div className="productContainer">
         <div className="productPhoto">
           <img src={`../beer-images/${props.label}`} />
@@ -18,10 +59,24 @@ export default function ProductView(props) {
           <div className="productDesc">{props.description.overallImpression}</div>
           <div className="productVPrice">40dkk</div>
           <div className="singleProductButtons">
-            <button className="minusBtn">-</button>
-            <p>2</p>
-            <button className="plusBtn">+</button>
-            <button className="addBtn">add to cart</button>
+            <div className="plusMinusBtn">
+              <button onClick={minus} disabled={props.soldout || amount === 0} className="minusBtn">
+                -
+              </button>
+              <p>{amount}</p>
+              <button onClick={plus} disabled={props.soldout} className="plusBtn">
+                +
+              </button>
+            </div>
+            <button
+              onClick={() => {
+                dispatch(addItemToBasket({ props, amount }));
+              }}
+              className="addBtn"
+              disabled={props.soldout || amount === 0}
+            >
+              add to basket
+            </button>
           </div>
         </div>
       </div>

@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 // import image from "../beer-images/elhefe.png";
 export default function Product(props) {
+  /* console.log(props.addToBasket); */
+
   const [setMessage] = useState("hi mom");
 
   const color = props.soldOut ? "red" : "white";
@@ -43,7 +45,7 @@ export default function Product(props) {
           </Link>
         </div>
       </article>
-      {shown && <ProductView handleClose={toggleProduct} {...props} />}
+      {shown && <ProductView addToBasket={props.addToBasket} handleClose={toggleProduct} {...props} />}
     </div>
   );
 }

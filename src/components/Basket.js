@@ -1,11 +1,12 @@
 import MyBasket from "./MyBasket";
-import CheckoutForm from "./CheckoutForm";
+import PaymentMethod from "./PaymentMethod";
 
 export default function Basket(props) {
   return (
-    <aside>
-      <MyBasket basket={props.basket} />
-      <CheckoutForm />
+    <aside className="basketContainer">
+      <h2>Your basket</h2>
+      <MyBasket basket={props.basket} {...props} />
+      <PaymentMethod />
     </aside>
   );
 }
