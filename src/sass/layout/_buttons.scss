@@ -12,7 +12,6 @@
   border: 1px solid #5bc4cf;
   margin: 0.5rem 0 1rem 0;
   font-family: variables.$font-1;
-  // color: variables.$color-button;
   color: variables.$color-button;
   font-weight: 700;
   text-decoration: none;
@@ -35,6 +34,8 @@
   display: flex;
   justify-content: center;
   font-size: 0.7rem;
+}
+.addToBasket {
   padding: 0.5rem 0.8rem;
 }
 
