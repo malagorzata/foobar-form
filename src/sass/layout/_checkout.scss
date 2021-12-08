@@ -1,0 +1,100 @@
+@use "../base/variables";
+
+#orders {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.allOrders {
+  margin-top: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 19rem;
+  border-radius: 10px;
+  border: 0.5px solid variables.$color-button;
+}
+.fullOrder {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr;
+  grid-template-rows: 1fr;
+  margin: 1rem 0.2rem;
+
+  .checkoutImg {
+    width: 8rem;
+    height: auto;
+    grid-column: 1;
+    margin-left: -2rem;
+  }
+  .orderDetails {
+    display: flex;
+    flex-direction: column;
+    margin-left: -1rem;
+    padding: 0;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    .beerPriceOrder {
+      font-family: variables.$font-1;
+      font-weight: normal;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    .qtCheckout {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1.8rem;
+
+      .minus {
+        margin-right: 0.5rem;
+        border: 1px solid black;
+        border-radius: 3px;
+        background-color: white;
+      }
+
+      .plus {
+        margin-left: 0.5rem;
+        border: 1px solid black;
+        border-radius: 3px;
+        background-color: white;
+      }
+    }
+  }
+  .finalBeerPrice {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    align-self: end;
+    font-family: variables.$font-1;
+    font-weight: 900;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+#order_final {
+  .beerNameOrder {
+    font-family: variables.$font-2 !important;
+    font-weight: normal !important;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+}
+
+#finalOrderPrice {
+  margin-top: 10%;
+
+  .orderPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+  }
+}
+
+.orderPrice {
+  p:nth-child(2) {
+    padding: 0 0.5rem;
+  }
+}

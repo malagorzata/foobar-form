@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ProductView from "./ProductView";
 
+import { Link } from "react-router-dom";
+
 // import image from "../beer-images/elhefe.png";
 export default function Product(props) {
   const [setMessage] = useState("hi mom");
@@ -34,9 +36,11 @@ export default function Product(props) {
           </div>
         </a>
         <div className="addBasket">
-          <button className="addToBasket" onClick={handleClick}>
-            ADD TO BASKET
-          </button>
+          <Link to="/payment">
+            <button className="addToBasket" onClick={handleClick}>
+              ADD TO BASKET
+            </button>
+          </Link>
         </div>
       </article>
       {shown && <ProductView handleClose={toggleProduct} {...props} />}

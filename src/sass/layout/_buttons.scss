@@ -1,6 +1,8 @@
 @use "../base/variables";
 
-.addToBasket {
+.addToBasket,
+.payNow,
+.editOrder {
   border: none;
   background-color: white;
   -webkit-box-shadow: 6px 6px 10px -9px rgba(91, 196, 207, 0.58);
@@ -10,7 +12,6 @@
   border-radius: 5px;
   border: 1px solid #5bc4cf;
   margin: 0.5rem 0 1rem 0;
-  font-size: 0.7rem;
   font-family: variables.$font-1;
   // color: variables.$color-button;
   color: variables.$color-button;
@@ -22,8 +23,20 @@
     color: white;
   }
 }
+.payNow {
+  width: 8rem;
+  align-self: flex-end;
+  margin: 1rem 0rem;
+  font-size: 0.7rem;
+}
 
 .addBasket {
   display: flex;
   justify-content: center;
+  font-size: 0.7rem;
+}
+
+.editOrder {
+  width: 7rem;
+  font-size: 0.6rem;
 }

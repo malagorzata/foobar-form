@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import ProductList from "./components/ProductList";
 import Basket from "./components/Basket";
 import ProductView from "./components/ProductView";
+import { Routes, Route, Link } from "react-router-dom";
+import PaymentSection from "./components/PaymentSection";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -41,9 +43,13 @@ function App() {
     <div className="App">
       <ProductList addToBasket={addToBasket} products={productCopy} />
       <Basket basket={basket} />
-      {/* <main>
-        <ProductView />
-      </main> */}
+      <PaymentSection />
+
+      {/* <Routes>
+        <Route path="/" element={<ProductList addToBasket={addToBasket} products={productCopy} />} />
+        <Route path="/" element={<Basket basket={basket} />} />
+        <Route path="/payment" element={<PaymentSection />} />
+      </Routes> */}
     </div>
   );
 }

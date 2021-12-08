@@ -1,5 +1,5 @@
 import Product from "./Product";
-import Nav from ".//Nav";
+import Nav from "./Nav";
 
 export default function ProductList(props) {
   console.log(props);
