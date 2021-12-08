@@ -41,10 +41,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <ProductList products={productCopy} />
-      <Basket basket={basket} />
-      <PaymentSection /> */}
-
       <Routes>
         <Route path="/" element={<Wrapper products={productCopy} basket={basket} />} />
         <Route path="/payment" element={<PaymentSection />} />
@@ -53,7 +49,7 @@ function App() {
   );
 }
 const Wrapper = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <>
       <ProductList products={props.products} />
