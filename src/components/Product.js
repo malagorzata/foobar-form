@@ -1,16 +1,28 @@
 import { useState } from "react";
 import ProductView from "./ProductView";
+import { useDispatch } from "react-redux";
+
+import { addItemToBasket } from "../features/basket/basketSlice";
 
 // import image from "../beer-images/elhefe.png";
 export default function Product(props) {
-  /* console.log(props.addToBasket); */
+  const [amount, setAmount] = useState(1);
+  const dispatch = useDispatch();
 
   /* for showing the selected product */
+
+  // function addToBasket(props) {
+  //   const newAmount = amount + 1;
+  //   if (amount <= 0) {
+  //     setAmount(newAmount);
+  //     dispatch(addItemToBasket({ props, amount }));
+  //   }
+  //   console.log(props.addToBasket);
+  // }
   const [shown, showProduct] = useState(false);
   const toggleProduct = () => {
     showProduct(!shown);
   };
-
   return (
     <div>
       <article>
@@ -25,10 +37,17 @@ export default function Product(props) {
           </div>
         </a>
         <div className="addBasket">
-          <button className="addToBasket">ADD TO BASKET</button>
+          <button
+            className="addToBasket"
+            onClick={() => {
+              dispatch(addItemToBasket({ props, amount }));
+            }}
+          >
+            ADD TO BASKET
+          </button>
         </div>
       </article>
-      {shown && <ProductView addToBasket={props.addToBasket} handleClose={toggleProduct} {...props} />}
+      {shown && <ProductView addItemToBasket={props.addItemToBasket} handleClose={toggleProduct} {...props} />}
     </div>
   );
 }
