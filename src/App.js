@@ -42,7 +42,11 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        {/* <Route path="/payment" render={() => <PaymentSection basket={basket} setBasket={setBasket} setOrderID={setOrderID} orderID={orderID}></PaymentSection>} /> */}
+        {/* 
+        <Route path="/" render={() => <Wrapper products={productCopy} basket={basket}></Wrapper>} /> */}
         <Route path="/" element={<Wrapper products={productCopy} basket={basket} />} />
+
         <Route path="/payment" element={<PaymentSection basket={basket} setBasket={setBasket} setOrderID={setOrderID} orderID={orderID} />} />
         <Route path="/ordercompleted" element={<OrderCompleted orderID={orderID} />} />
       </Routes>

@@ -9,6 +9,7 @@ export default function PaymentSection(props) {
   let PostOrders = props.basket.map((order) => {
     return { name: order.product.name, amount: Number(order.amount) };
   });
+
   let navigate = useNavigate();
   function orderSubmit(orderData) {
     PostData(orderData, "https://foo-bar-database.herokuapp.com/order", (data) => {
