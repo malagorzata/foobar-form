@@ -10,9 +10,8 @@ export default function MyBasket(props) {
   return (
     <div>
       <ul className="basketList">
-        {/* <BasketItem basket={props.basket} {...props} /> */}
         {basketItems.map((basketItem) => (
-          <BasketItem basketItem={basketItem} /* basket={props.basket} */ key={basketItem.id} {...props} />
+          <BasketItem basketItem={basketItem} key={basketItem.id} {...props} />
         ))}
       </ul>
       <div className="paymentLine"></div>

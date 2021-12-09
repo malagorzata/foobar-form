@@ -8,11 +8,6 @@ export default function BasketItem(props) {
   //adding to cart functions
   function minus1() {
     dispatch(minus({ basketItemId: props.basketItem.id }));
-
-    /*  if (basketAmount <= 0) return;
-
-    const newAmount = basketAmount - 1;
-    setAmount(newAmount); */
   }
 
   function plus1() {
@@ -48,4 +43,3 @@ export default function BasketItem(props) {
     </div>
   );
 }
-/* export const { basketAmount } = basketAmount; */
