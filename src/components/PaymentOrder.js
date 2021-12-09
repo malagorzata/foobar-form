@@ -18,7 +18,9 @@ function PaymentBasketItem(props) {
 
   return (
     <article className="fullOrder">
-      <img src="../beer-images/elhefe.png" alt="el hefe" className="checkoutImg" />
+      <img src={`../beer-images/${props.img}`} alt={props.img} className="checkoutImg" />
+
+      {/* <img src="../beer-images/elhefe.png" alt="el hefe" className="checkoutImg" /> */}
       <div className="orderDetails">
         <h2 className="beerNameOrder">{props.name}</h2>
         <p className="beerPriceOrder">40 DKK</p>
