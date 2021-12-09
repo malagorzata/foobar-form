@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom";
 import PostData from "./PostData";
 
 export default function PaymentSection(props) {
+  let PostOrders = props.basket.map((order) => {
+    return { name: order.product.name, amount: Number(order.amount) };
+  });
   let navigate = useNavigate();
   function orderSubmit(orderData) {
     PostData(orderData, "https://foo-bar-database.herokuapp.com/order", (data) => {
@@ -23,7 +26,7 @@ export default function PaymentSection(props) {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            orderSubmit();
+            orderSubmit(PostOrders);
             navigate("/ordercompleted");
           }}
         >
