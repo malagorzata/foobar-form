@@ -21,20 +21,6 @@ export default function ProductView(props) {
     setAmount(newAmount);
   }
 
-  /*   //first select quantity
-  function minus() {
-    setAmount((oldAmount) => {
-      if (oldAmount > 0) {
-        return oldAmount - 1;
-      }
-      return 0;
-    });
-  }
-
-  function plus() {
-    setAmount((oldAmount) => oldAmount + 1);
-  } */
-
   return (
     <div className="productView">
       <div className="backArrow" onClick={props.handleClose}>

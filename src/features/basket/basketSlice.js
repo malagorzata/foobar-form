@@ -16,12 +16,32 @@ export const slice = createSlice({
         name: action.payload.props.name,
         price: 50,
         amount: action.payload.amount,
-        totalPrice: 50 * action.payload.amount,
       });
     },
+
     removeItemFromBasket: (state, action) => {
-      console.log("delete");
       state.basketItems = state.basketItems.filter((basketItem) => basketItem.id !== action.payload.basketItemId);
+    },
+
+    minus: (state, action) => {
+      state.basketItems = state.basketItems.map((basketItem) => {
+        if (basketItem.id === action.payload.basketItemId) {
+          console.log("minus", basketItem.amount);
+          basketItem.amount = basketItem.amount - 1;
+        }
+        return basketItem;
+      });
+      state.basketItems = state.basketItems.filter((basketItem) => basketItem.amount > 0);
+    },
+
+    plus: (state, action) => {
+      state.basketItems = state.basketItems.map((basketItem) => {
+        if (basketItem.id === action.payload.basketItemId) {
+          console.log("plus", basketItem.amount);
+          basketItem.amount = basketItem.amount + 1;
+        }
+        return basketItem;
+      });
     },
   },
 });
@@ -30,10 +50,10 @@ export const getBasketItems = (state) => state.basket.basketItems;
 
 export const getTotalPrice = (state) => {
   return state.basket.basketItems.reduce((total, basketItem) => {
-    return basketItem.totalPrice + total;
+    return basketItem.amount * basketItem.price + total;
   }, 0);
 };
 
-export const { addItemToBasket, removeItemFromBasket } = slice.actions;
+export const { addItemToBasket, removeItemFromBasket, minus, plus } = slice.actions;
 
 export default slice.reducer;
