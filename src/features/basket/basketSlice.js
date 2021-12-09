@@ -8,15 +8,37 @@ export const slice = createSlice({
   reducers: {
     addItemToBasket: (state, action) => {
       //generating unique id for item
-      const itemID = Math.floor(Math.random());
+      const id = new Date().getTime(); //generate id for basket item
 
       state.basketItems.push({
-        id: itemID,
+        id: id,
         img: action.payload.props.label,
         name: action.payload.props.name,
-        price: 40,
-        amount: action.payload.amount, //How do i get the amount from product view??
-        totalPrice: 40 * action.payload.amount,
+        price: 50,
+        amount: action.payload.amount,
+      });
+    },
+
+    removeItemFromBasket: (state, action) => {
+      state.basketItems = state.basketItems.filter((basketItem) => basketItem.id !== action.payload.basketItemId);
+    },
+
+    minus: (state, action) => {
+      state.basketItems = state.basketItems.map((basketItem) => {
+        if (basketItem.id === action.payload.basketItemId) {
+          basketItem.amount = basketItem.amount - 1;
+        }
+        return basketItem;
+      });
+      state.basketItems = state.basketItems.filter((basketItem) => basketItem.amount > 0);
+    },
+
+    plus: (state, action) => {
+      state.basketItems = state.basketItems.map((basketItem) => {
+        if (basketItem.id === action.payload.basketItemId) {
+          basketItem.amount = basketItem.amount + 1;
+        }
+        return basketItem;
       });
     },
   },
@@ -24,6 +46,12 @@ export const slice = createSlice({
 
 export const getBasketItems = (state) => state.basket.basketItems;
 
-export const { addItemToBasket } = slice.actions;
+export const getTotalPrice = (state) => {
+  return state.basket.basketItems.reduce((total, basketItem) => {
+    return basketItem.amount * basketItem.price + total;
+  }, 0);
+};
+
+export const { addItemToBasket, removeItemFromBasket, minus, plus } = slice.actions;
 
 export default slice.reducer;

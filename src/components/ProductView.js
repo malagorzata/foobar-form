@@ -21,20 +21,6 @@ export default function ProductView(props) {
     setAmount(newAmount);
   }
 
-  /*   //first select quantity
-  function minus() {
-    setAmount((oldAmount) => {
-      if (oldAmount > 0) {
-        return oldAmount - 1;
-      }
-      return 0;
-    });
-  }
-
-  function plus() {
-    setAmount((oldAmount) => oldAmount + 1);
-  } */
-
   return (
     <div className="productView">
       <div className="backArrow" onClick={props.handleClose}>
@@ -57,7 +43,7 @@ export default function ProductView(props) {
             <div className="quality 3">bitter</div>
           </div>
           <div className="productDesc">{props.description.overallImpression}</div>
-          <div className="productVPrice">40dkk</div>
+          <div className="productVPrice">50dkk</div>
           <div className="singleProductButtons">
             <div className="plusMinusBtn">
               <button onClick={minus} disabled={props.soldout || amount === 0} className="minusBtn">
