@@ -26,7 +26,6 @@ export const slice = createSlice({
     minus: (state, action) => {
       state.basketItems = state.basketItems.map((basketItem) => {
         if (basketItem.id === action.payload.basketItemId) {
-          console.log("minus", basketItem.amount);
           basketItem.amount = basketItem.amount - 1;
         }
         return basketItem;
@@ -37,7 +36,6 @@ export const slice = createSlice({
     plus: (state, action) => {
       state.basketItems = state.basketItems.map((basketItem) => {
         if (basketItem.id === action.payload.basketItemId) {
-          console.log("plus", basketItem.amount);
           basketItem.amount = basketItem.amount + 1;
         }
         return basketItem;
