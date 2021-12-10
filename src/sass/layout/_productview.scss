@@ -23,14 +23,15 @@
 }
 
 .productContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   height: 100vh;
   justify-content: center;
   align-items: center;
 }
 
 .productPhoto {
-  width: 100rem;
+  width: 35rem;
 }
 
 .productPhoto img {
@@ -45,6 +46,7 @@
     font-size: 3.5rem;
     letter-spacing: 3px;
     margin-bottom: 0.7rem;
+    margin-left: -2rem;
   }
 }
 
