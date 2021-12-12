@@ -11,14 +11,6 @@ export default function Product(props) {
 
   /* for showing the selected product */
 
-  // function addToBasket(props) {
-  //   const newAmount = amount + 1;
-  //   if (amount <= 0) {
-  //     setAmount(newAmount);
-  //     dispatch(addItemToBasket({ props, amount }));
-  //   }
-  //   console.log(props.addToBasket);
-  // }
   const [shown, showProduct] = useState(false);
   const toggleProduct = () => {
     showProduct(!shown);

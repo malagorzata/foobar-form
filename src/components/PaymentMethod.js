@@ -1,12 +1,40 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function PaymentMethod(props) {
+  const [selected, setSelected] = useState({
+    activeObject: null,
+  });
+
+  function toggleSelected(e) {
+    console.log(e.target.id);
+    setSelected({ ...selected, activeObject: e.target.id });
+    console.log(selected.activeObject);
+
+    if (e.target.id === selected.activeObject) {
+      return "selected";
+    } else {
+      return "notSelected";
+    }
+  }
+
+  /* function toggleSelectedStyles(element) {
+    console.log(element.target.id);
+    console.log(selected.activeObject);
+
+    if (element.target.id === selected.activeObject) {
+      return "selected";
+    } else {
+      return "notSelected";
+    }
+  } */
+
   return (
     <div className="paymentMethod">
       <h2>Payment Method</h2>
       <div className="methods">
         <div className="cardP">
-          <button>
+          <button id="cardBtn" className={selected} onClick={toggleSelected}>
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g>
                 <path
@@ -27,7 +55,7 @@ export default function PaymentMethod(props) {
           <p>Credit card</p>
         </div>
         <div className="contactless">
-          <button>
+          <button id="contaclessBtn" className={selected} onClick={toggleSelected}>
             <svg width="21" height="28" viewBox="0 0 21 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill-rule="evenodd"
@@ -40,7 +68,7 @@ export default function PaymentMethod(props) {
           <p>Contactless</p>
         </div>
         <div className="mpP">
-          <button>
+          <button id="mbpBtn" className={selected} onClick={toggleSelected}>
             <svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path
