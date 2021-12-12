@@ -1,5 +1,6 @@
 function postData(data, url, callback) {
   const postData = JSON.stringify(data);
+  console.log(data);
 
   fetch(url, {
     method: "post",
@@ -8,7 +9,11 @@ function postData(data, url, callback) {
     },
     body: postData,
   })
-    .then((response) => response.json())
+    .then((response) => {
+      const Obj = response.json();
+      return Obj;
+    })
+
     .then((data) => {
       console.log("Successful submission:", data);
       callback(data);

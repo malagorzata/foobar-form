@@ -1,21 +1,27 @@
 import PaymentForm from "./PaymentForm";
 import Nav from "./Nav";
 import CheckoutView from "./CheckoutView";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import PostData from "./PostData";
+import { getBasketItems } from "../features/basket/basketSlice";
+import { useSelector } from "react-redux";
 
 export default function PaymentSection(props) {
-  let PostOrders = props.basket.map((order) => {
-    return { name: order.product.name, amount: Number(order.amount) };
+  const basketItems = useSelector(getBasketItems);
+  // console.log(basketItems);
+
+  let PostOrders = basketItems.map((order) => {
+    return { name: order.name, amount: Number(order.amount), price: order.price };
   });
+
+  // console.log(PostOrders);
 
   let navigate = useNavigate();
   function orderSubmit(orderData) {
     PostData(orderData, "https://foo-bar-database.herokuapp.com/order", (data) => {
-      return data.message === "added" ? <div>{props.setOrderID(data.id)}</div> : null;
+      return data.message === "added" ? <div>{(PostOrders, data, props.setOrderID(data.id))}</div> : null;
     });
-    console.log(orderData);
+    // console.log(orderData);
   }
 
   return (
@@ -31,10 +37,12 @@ export default function PaymentSection(props) {
             navigate("/ordercompleted");
           }}
         >
-          <PaymentForm />
-          <button type="submit" className="payNow">
-            PAY NOW
-          </button>
+          <div class="form">
+            <PaymentForm />
+            <button type="submit" className="payNow">
+              PAY NOW
+            </button>
+          </div>
         </form>
       </div>
     </main>

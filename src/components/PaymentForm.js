@@ -1,9 +1,7 @@
 import React from "react";
-import { useState } from "react";
 import InputMask from "react-input-mask";
 import Cards from "react-credit-cards";
 import { Input } from "antd";
-import PostData from "./PostData";
 
 class PaymentForm extends React.Component {
   state = {
@@ -16,11 +14,6 @@ class PaymentForm extends React.Component {
     dateValid: true,
     cvcValid: true,
     nameValid: true,
-
-    // cardNumberValid: true,
-    // dateValid: true,
-    // cvcValid: true,
-    // nameValid: true,
   };
 
   handleNameValid = (e) => {
@@ -65,13 +58,6 @@ class PaymentForm extends React.Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    PostData(e, "https://foo-bar-database.herokuapp.com/order", (data) => {
-      return data.message === "added" ? <div></div> : null;
-    });
-  };
-
   render() {
     return (
       <div id="payment_form">
@@ -90,13 +76,12 @@ class PaymentForm extends React.Component {
             <InputMask
               name="number"
               id="cardnumber"
-              placeholder="Enter your card no."
+              placeholder="Enter your card number"
               type="text"
               required
               mask="9999 9999 9999 9999"
               value={this.number}
               maskChar=""
-              className={`ant-input ${this.state.cardnumberValid ? "" : "custom"}`}
               onChange={this.handleInputChange}
               onBlur={this.handleCreditCardValid}
             ></InputMask>
@@ -112,7 +97,6 @@ class PaymentForm extends React.Component {
                 mask="99/99"
                 type="text"
                 placeholder="MM/YY"
-                className={`ant-input ${this.state.dateValid ? "" : "custom"}`}
                 maskChar=""
                 required
                 value={this.monthyear}
