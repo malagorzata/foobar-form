@@ -31,6 +31,7 @@ export default function PaymentSection(props) {
       <div id="payment_section">
         <CheckoutView {...props} />
         <form
+          autocomplete="off"
           onSubmit={(e) => {
             e.preventDefault();
             orderSubmit(PostOrders);

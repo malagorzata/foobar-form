@@ -2,7 +2,7 @@ import Product from "./Product";
 import Nav from "./Nav";
 
 export default function ProductList(props) {
-  const mapped = props.products.map((product) => <Product addToBasket={props.addToBasket} {...product} />);
+  const mapped = props.products.map((product) => <Product key={product.name} addToBasket={props.addToBasket} key={props.name} {...product} />);
 
   return (
     <section className="productListHead">

@@ -67,6 +67,7 @@ class PaymentForm extends React.Component {
         <div className="card_container">
           <div className="form-control">
             <label htmlFor="name">Name on the card</label>
+
             <Input name="name" type="text" placeholder="Enter your full name" minLength="2" value={this.name} required onChange={this.handleInputChange} onFocus={this.handleInputFocus} onBlur={this.handleNameValid} />
             <p className={`${this.state.nameValid ? "hidden" : "errormessage"}`}>Please enter your full name</p>
           </div>
@@ -104,7 +105,7 @@ class PaymentForm extends React.Component {
                 onChange={this.handleInputChange}
                 onFocus={this.handleInputFocus}
               ></InputMask>
-              <p className={`${this.state.dateValid ? "hidden" : "errormessage"}`}>Please enter mm/yy</p>{" "}
+              <p className={`${this.state.dateValid ? "hidden" : "errormessage"}`}>Enter mm/yy</p>{" "}
             </div>
 
             <div className="form-control">

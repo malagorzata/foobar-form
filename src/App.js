@@ -7,25 +7,33 @@ import PaymentSection from "./components/PaymentSection";
 import OrderCompleted from "./components/OrderCompleted";
 
 function App() {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
   const [basket, setBasket] = useState([]);
   const [orderID, setOrderID] = useState("0");
+  const [tap, setTap] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const res = await fetch("https://foo-bar-database.herokuapp.com/beertypes");
-      const data = await res.json();
-      setProducts(data);
-    }
-    fetchData();
-  });
+    Promise.all([fetch("https://foo-bar-database.herokuapp.com/").then((res) => res.json()), fetch("https://foo-bar-database.herokuapp.com/beertypes").then((res) => res.json())]).then((data) => {
+      const taps = data[0].taps;
+      const workingTaps = taps.map((tap) => tap.beer);
+      const types = data[1];
 
-  const productCopy = [...products];
+      const beerOnTap = types.filter((type) => {
+        if (workingTaps.includes(type.name)) {
+          return true;
+        }
+        return false;
+      });
+      setTap(beerOnTap);
+    });
+  }, []);
+
+  const productCopy = [...tap];
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Wrapper products={productCopy} basket={basket} />} />
+        <Route path="/" element={<Wrapper tap={productCopy} basket={basket} />} />
         <Route path="/payment" element={<PaymentSection basket={basket} setBasket={setBasket} setOrderID={setOrderID} orderID={orderID} />} />
         <Route path="/ordercompleted" element={<OrderCompleted orderID={orderID} />} />
       </Routes>
@@ -36,7 +44,7 @@ const Wrapper = (props) => {
   // console.log(props);
   return (
     <>
-      <ProductList products={props.products} />
+      <ProductList products={props.tap} />
       <Basket basket={props.basket} />
     </>
   );

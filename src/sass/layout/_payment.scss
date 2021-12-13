@@ -14,6 +14,11 @@ main {
   display: none;
 }
 
+.form-control {
+  input:invalid:not(:placeholder-shown) {
+    border: red 2px solid;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
@@ -137,7 +142,12 @@ main {
     margin-top: 1rem;
   }
 }
-
+.card_container {
+  p {
+    font-size: 0.8rem;
+    color: red;
+  }
+}
 @media (min-width: 320px) and (max-width: 800px) {
   main {
     grid-column-start: 1;
