@@ -22,7 +22,7 @@ export default function Product(props) {
           <div className="beer-price">
             <h3>{props.category}</h3>
             <div className="line"></div>
-            <p>50 dkk</p>
+            <p>40 dkk</p>
           </div>
         </a>
         <div className="addBasket">

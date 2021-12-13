@@ -37,7 +37,7 @@ export default function BasketItem(props) {
               </button>
             </div>
           </div>
-          <div className="itemTotalPrice">{50 * props.basketItem.amount}dkk</div>
+          <div className="itemTotalPrice">{40 * props.basketItem.amount}dkk</div>
         </div>
       </li>
     </div>

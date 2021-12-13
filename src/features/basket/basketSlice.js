@@ -31,7 +31,7 @@ export const slice = createSlice({
           id: id,
           img: action.payload.props.label,
           name: action.payload.props.name,
-          price: 50,
+          price: 40,
           amount: action.payload.amount,
         });
       }
