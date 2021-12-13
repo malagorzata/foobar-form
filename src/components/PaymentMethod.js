@@ -94,7 +94,7 @@ export default function PaymentMethod(props) {
         </div>
       </div>
       <Link className="checkoutBtn" to="/payment">
-        CHECKOUT
+        Checkout
       </Link>
     </div>
   );

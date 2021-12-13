@@ -7,11 +7,8 @@
 
 .App {
   display: grid;
-  grid-template-columns: 3.2fr 0.8fr;
+  grid-template-columns: 78vw 22vw;
 }
-/* .App > * {
-  border: 1px solid #000;
-} */
 
 nav {
   padding: 1.5rem;
@@ -23,6 +20,9 @@ nav {
     color: black;
     font-family: variables.$font-1;
     font-size: 2.5rem;
+  }
+  .mobileBasketBtn {
+    display: none;
   }
 }
 
@@ -38,10 +38,6 @@ nav {
     box-shadow: 0px 0px 17px 8px rgba(175, 175, 175, 0.23);
     background-color: white;
     transition: all 0.2s ease-in-out;
-    /* 
-    -webkit-box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1);
-    -moz-box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1);
-    box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1); */
     &:hover {
       -webkit-box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1);
       -moz-box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1);
@@ -117,5 +113,96 @@ nav {
     padding: 0.3rem 2rem;
     margin: 0 1rem;
     color: 242424;
+  }
+}
+
+@media only screen and (max-width: 1373px) {
+  .App {
+    grid-template-columns: 79vw 21vw;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .App {
+    grid-template-columns: 72vw 25vw;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .App {
+    grid-template-columns: 75vw 25vw;
+  }
+
+  .ProductList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 50px));
+  }
+
+  .ProductList article .beerView h3 {
+    font-size: 0.7rem;
+  }
+
+  .productListHead {
+    h1 {
+      font-size: 1.4rem;
+    }
+    h2 {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .App {
+    grid-template-columns: 100vw;
+  }
+
+  .ProductList {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 50px));
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  nav {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.3rem;
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: variables.$font-1;
+      font-size: 2.5rem;
+    }
+    .basketDot {
+      position: absolute;
+      right: 2.9rem;
+      top: 1.6rem;
+      width: 10px;
+      height: 10px;
+      background-color: #c73c3c;
+      border-radius: 10rem;
+    }
+    .mobileBasketBtn {
+      display: initial;
+      position: absolute;
+      right: 1rem;
+      border: none;
+      border-radius: 10rem;
+      width: 2.8rem;
+      height: 2.8rem;
+      svg {
+        max-width: 70%;
+      }
+      &:hover {
+        background-color: rgb(155, 155, 155);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .ProductList {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 50px));
   }
 }
