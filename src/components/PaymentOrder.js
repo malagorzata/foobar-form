@@ -15,7 +15,7 @@ export default function PaymentOrder() {
 
 function PaymentBasketItem(props) {
   const totalPrice = 50 * props.amount;
-
+  console.log(props);
   return (
     <article className="fullOrder">
       <img src={`../beer-images/${props.img}`} alt={props.img} className="checkoutImg" />
