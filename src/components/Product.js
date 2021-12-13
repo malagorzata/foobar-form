@@ -7,6 +7,8 @@ export default function Product(props) {
   const [amount, setAmount] = useState(1);
   const dispatch = useDispatch();
 
+  /* for showing the selected product */
+
   const [shown, showProduct] = useState(false);
   const toggleProduct = () => {
     showProduct(!shown);

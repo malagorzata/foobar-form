@@ -8,7 +8,7 @@
   height: 100vh;
   width: 78%;
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 252, 244, 1) 29%, rgba(253, 238, 176, 1) 100%);
+  background: linear-gradient(180deg, #fdeebb 0%, rgba(255, 255, 255, 1) 100%);
   font-family: variables.$font-1;
   font-size: 1.1rem;
 }
@@ -23,14 +23,15 @@
 }
 
 .productContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   height: 100vh;
   justify-content: center;
   align-items: center;
 }
 
 .productPhoto {
-  width: 100rem;
+  width: 35rem;
 }
 
 .productPhoto img {
@@ -45,6 +46,7 @@
     font-size: 3.5rem;
     letter-spacing: 3px;
     margin-bottom: 0.7rem;
+    margin-left: -2rem;
   }
 }
 

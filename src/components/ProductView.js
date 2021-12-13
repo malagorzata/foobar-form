@@ -4,6 +4,17 @@ import { addItemToBasket } from "../features/basket/basketSlice";
 
 export default function ProductView(props) {
   //console.log(props.addToBasket);
+  //console.log(props);
+  const [colors, setColors] = useState([]);
+
+  /*  function fetchColors() {
+    fetch("beer-colors.json")
+      .then((response) => response.json())
+      .then((colorsData) => {
+        setColors(colorsData);
+      });
+  }
+  fetchColors(); */
 
   const [amount, setAmount] = useState(0);
   const dispatch = useDispatch();
