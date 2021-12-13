@@ -29,7 +29,7 @@ export default function Product(props) {
           <button
             className="addToBasket"
             onClick={() => {
-              dispatch(addItemToBasket({ props, amount }));
+              dispatch(addItemToBasket({ props, amount, basketItemName: props.name }));
             }}
           >
             ADD TO BASKET

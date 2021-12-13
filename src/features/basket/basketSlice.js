@@ -7,27 +7,41 @@ export const slice = createSlice({
   },
   reducers: {
     addItemToBasket: (state, action) => {
-      console.log("addItemToBasket");
+      const basketItem = action.payload;
 
-      //generating unique id for item
-      const id = new Date().getTime(); //generate id for basket item
+      //check if this item is already in the basket
+      const itemInBasket = state.basketItems.find((basketItem) => basketItem.name === action.payload.basketItemName);
+      //console.log(itemInBasket);
+      //console.log(action.payload.basketItemName);
+      //console.log(basketItem.props.name);
+      //console.log(basketItem.amount);
 
-      state.basketItems.push({
-        id: id,
-        img: action.payload.props.label,
-        name: action.payload.props.name,
-        price: 50,
-        amount: action.payload.amount,
-      });
+      if (itemInBasket) {
+        //if it is, add to the amount
+        //console.log(itemInBasket.amount);
+        //console.log(basketItem.amount);
+        itemInBasket.amount = itemInBasket.amount + basketItem.amount;
+      } else {
+        //if it's not, add new item to basket
+
+        //generating unique id for item
+        const id = new Date().getTime(); //generate id for basket item
+
+        state.basketItems.push({
+          id: id,
+          img: action.payload.props.label,
+          name: action.payload.props.name,
+          price: 50,
+          amount: action.payload.amount,
+        });
+      }
     },
 
     removeItemFromBasket: (state, action) => {
-      console.log("removeItemToBasket");
       state.basketItems = state.basketItems.filter((basketItem) => basketItem.id !== action.payload.basketItemId);
     },
 
     minus: (state, action) => {
-      console.log("minus");
       state.basketItems = state.basketItems.map((basketItem) => {
         if (basketItem.id === action.payload.basketItemId) {
           basketItem.amount = basketItem.amount - 1;
@@ -38,7 +52,6 @@ export const slice = createSlice({
     },
 
     plus: (state, action) => {
-      console.log("plus");
       state.basketItems = state.basketItems.map((basketItem) => {
         if (basketItem.id === action.payload.basketItemId) {
           basketItem.amount = basketItem.amount + 1;

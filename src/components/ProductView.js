@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { addItemToBasket } from "../features/basket/basketSlice";
 
 export default function ProductView(props) {
-  //console.log(props.addToBasket);
   //console.log(props);
   const [colors, setColors] = useState([]);
 
@@ -67,7 +66,7 @@ export default function ProductView(props) {
             </div>
             <button
               onClick={() => {
-                dispatch(addItemToBasket({ props, amount }));
+                dispatch(addItemToBasket({ props, amount, basketItemName: props.name }));
               }}
               className="addBtn"
               disabled={props.soldout || amount === 0}
