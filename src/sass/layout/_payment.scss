@@ -43,10 +43,10 @@ main {
   }
 }
 
-#payment_form {
+.form {
   display: flex;
   flex-direction: column;
-  width: 30rem;
+  width: 29rem;
   border-radius: 10px;
   padding: 2rem 0;
   margin: 2rem;
@@ -107,4 +107,60 @@ main {
   background: rgb(99, 200, 186) !important;
   background: linear-gradient(40deg, rgba(166, 240, 247, 1) 0%, rgba(147, 222, 230, 1) 26%, rgba(57, 180, 193, 1) 83%) !important;
   box-shadow: none !important;
+}
+
+.circle {
+  background: linear-gradient(180deg, rgba(255, 143, 143, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  width: 15rem;
+  height: 15rem;
+  border-radius: 200%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: variables.$font-1;
+  font-size: 3rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ordercompleted {
+  text-align: center;
+  font-family: variables.$font-1;
+  line-height: 3rem;
+  h1 {
+    font-family: variables.$font-2;
+    letter-spacing: 1px;
+  }
+  p {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+  main {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+  #payment_section {
+    flex-direction: column;
+  }
+
+  .form,
+  #order_final {
+    width: 21rem;
+  }
+  .payNow {
+    margin: 0 0.6rem;
+  }
+  .circle {
+    margin-top: 1rem;
+  }
+  .ordercompleted {
+    p {
+      line-height: 1.5rem;
+      margin: 1rem;
+    }
+  }
 }
