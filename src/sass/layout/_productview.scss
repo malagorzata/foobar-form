@@ -119,7 +119,7 @@
   background-color: #f9e8b1;
   border-color: transparent;
   border-radius: 2rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   padding: 0.7rem 1rem 0.5rem 1rem;
   margin-left: 2rem;
@@ -127,7 +127,7 @@
 }
 
 .singleProductButtons .addBtn:hover {
-  background-color: #f3da87;
+  box-shadow: 0.7px 0.5px 1.6px rgba(0, 0, 0, 0.057), 2.2px 1.6px 5.4px rgba(0, 0, 0, 0.083), 10px 7px 24px rgba(0, 0, 0, 0.14);
   transition: 0.2s ease-in-out;
 }
 
