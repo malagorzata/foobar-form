@@ -174,28 +174,30 @@ nav {
       font-family: variables.$font-1;
       font-size: 2.5rem;
     }
-    .basketDot {
-      position: absolute;
-      right: 2.9rem;
-      top: 1.6rem;
-      width: 10px;
-      height: 10px;
-      background-color: #c73c3c;
-      border-radius: 10rem;
-    }
+
     .mobileBasketBtn {
       display: initial;
-      position: absolute;
+      position: fixed;
       right: 1rem;
       border: none;
       border-radius: 10rem;
       width: 2.8rem;
       height: 2.8rem;
+      z-index: 5;
       svg {
         max-width: 70%;
       }
       &:hover {
         background-color: rgb(155, 155, 155);
+      }
+      .basketDot {
+        position: absolute;
+        right: 2.1rem;
+        top: 0.2rem;
+        width: 10px;
+        height: 10px;
+        background-color: #c73c3c;
+        border-radius: 10rem;
       }
     }
   }

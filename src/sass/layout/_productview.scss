@@ -130,3 +130,269 @@
   background-color: #f3da87;
   transition: 0.2s ease-in-out;
 }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1240px) {
+  .productView {
+    width: 70%;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .productView {
+    width: 65%;
+    font-size: 1rem;
+  }
+
+  .backArrow {
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .productPhoto {
+    width: 27rem;
+    margin-left: -5rem;
+  }
+
+  .productPhoto img {
+    max-width: 100%;
+  }
+
+  .productInfo {
+    margin-left: -3rem;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0;
+      margin-left: -2rem;
+    }
+  }
+
+  .perCountry {
+    margin-bottom: 0.6rem;
+  }
+
+  .qualities {
+    margin-bottom: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .productDesc {
+    line-height: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .productVPrice {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .singleProductButtons {
+    align-items: center;
+    font-size: 1.2rem;
+    .plusMinusBtn {
+      display: flex;
+      gap: 1rem;
+      width: 7rem;
+      p {
+        width: 2rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .singleProductButtons button {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .plusBtn {
+    line-height: 1.2rem;
+  }
+
+  .singleProductButtons .addBtn {
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .productView {
+    width: 70%;
+    font-size: 0.8rem;
+  }
+
+  .productPhoto {
+    width: 22rem;
+    margin-left: -4rem;
+  }
+
+  .productInfo {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .qualities {
+    font-size: 0.7rem;
+  }
+
+  .quality {
+    border: 2px solid variables.$color3;
+    padding: 0.4rem 0.6rem 0.1rem 0.6rem;
+  }
+
+  .productDesc {
+    line-height: 1.3rem;
+  }
+
+  .productVPrice {
+    font-size: 1.7rem;
+  }
+
+  .singleProductButtons {
+    align-items: center;
+    font-size: 1rem;
+    .plusMinusBtn {
+      width: 6.5rem;
+      p {
+        width: 1rem;
+      }
+    }
+  }
+
+  .singleProductButtons button {
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .singleProductButtons .addBtn {
+    margin-left: 0rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .productView {
+    width: 100%;
+    height: fit-content;
+    overflow-y: scroll;
+    font-size: 1rem;
+  }
+
+  .productContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .productPhoto {
+    width: 25rem;
+    margin-top: 28rem;
+    margin-left: -0.5rem;
+  }
+
+  .productPhoto img {
+    max-width: 100%;
+  }
+
+  .productInfo {
+    margin: 0;
+    text-align: center;
+    h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  .perCountry {
+    margin-bottom: 1.6rem;
+  }
+
+  .qualities {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+  }
+
+  .quality {
+    border: 2px solid variables.$color3;
+    border-radius: 10rem;
+    padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+  }
+
+  .productDesc {
+    width: 100%;
+    line-height: 1.8rem;
+    text-align: justify;
+    margin: 0;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .productVPrice {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  .singleProductButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 5rem;
+    .plusMinusBtn {
+      display: flex;
+      gap: 1rem;
+      width: 7.5rem;
+      p {
+        width: 2rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .singleProductButtons button {
+    background-color: transparent;
+    border: solid 2px black;
+    border-radius: 3px;
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1.1rem;
+    font-family: variables.$font-1;
+  }
+
+  .plusBtn {
+    line-height: 1.6rem;
+  }
+
+  .singleProductButtons button:hover {
+    background-color: #e2e2e2;
+  }
+
+  .singleProductButtons .addBtn {
+    width: fit-content;
+    height: fit-content;
+    background-color: #f9e8b1;
+    border-color: transparent;
+    border-radius: 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.7rem 1rem 0.5rem 1rem;
+    margin-left: 2rem;
+    transition: 0.2s ease-in-out;
+  }
+
+  .singleProductButtons .addBtn:hover {
+    background-color: #f3da87;
+    transition: 0.2s ease-in-out;
+  }
+}

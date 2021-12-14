@@ -32,8 +32,9 @@ export default function Nav() {
             fill="#343331"
           />
         </svg>
+        <div className="basketDot" style={{ backgroundColor: color }}></div>
       </button>
-      <div className="basketDot" style={{ backgroundColor: color }}></div>
+
       {basketOpen && <MobileBasket handleClose={toggleBasket} />}
     </nav>
   );
