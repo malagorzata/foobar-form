@@ -21,7 +21,9 @@ export default function Nav() {
 
   return (
     <nav>
-      <a href="/">FooBar</a>
+      <a href="/">
+        <img src="../images/logo-small.png" alt="FooBar"></img>
+      </a>
       <button className="mobileBasketBtn" onClick={toggleBasket}>
         <svg xmlns="http://www.w3.org/2000/svg" width="35.699" height="27.766" viewBox="0 0 35.699 27.766">
           <path

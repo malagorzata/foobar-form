@@ -5,21 +5,17 @@
 .editOrder {
   border: none;
   background-color: white;
-  -webkit-box-shadow: 6px 6px 10px -9px rgba(91, 196, 207, 0.58);
-  -moz-box-shadow: 6px 6px 10px -9px rgba(91, 196, 207, 0.58);
-  box-shadow: 6px 6px 10px -9px rgba(91, 196, 207, 0.58);
   border-radius: 5px;
-  border: 1px solid #5bc4cf;
+  border: 2px solid variables.$color-button6;
   margin: 0.5rem 0 1rem 0;
   font-family: variables.$font-1;
-  color: variables.$color-button;
+  color: black;
   font-weight: 700;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    border: 1px solid #5bc4cf;
-    background-color: #5bc4cf;
-    color: white;
+    background-color: variables.$color-button5;
   }
 }
 .payNow {
@@ -36,7 +32,8 @@
   font-size: 0.7rem;
 }
 .addToBasket {
-  padding: 0.5rem 0.8rem;
+  padding: 0.6rem 0.8rem 0.5rem 0.8rem;
+  font-size: 0.6rem;
 }
 
 .editOrder {

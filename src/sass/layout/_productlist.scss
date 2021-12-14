@@ -8,6 +8,7 @@
 .App {
   display: grid;
   grid-template-columns: 78vw 22vw;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, #e5f0f9 100%);
 }
 
 nav {
@@ -20,6 +21,9 @@ nav {
     color: black;
     font-family: variables.$font-1;
     font-size: 2.5rem;
+    img {
+      max-width: 70%;
+    }
   }
   .mobileBasketBtn {
     display: none;
@@ -39,9 +43,10 @@ nav {
     background-color: white;
     transition: all 0.2s ease-in-out;
     &:hover {
-      -webkit-box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1);
-      -moz-box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1);
-      box-shadow: 1px 3px 12px 3px rgba(255, 230, 181, 1);
+      -webkit-box-shadow: 1px 3px 12px 3px variables.$color-button5;
+      -moz-box-shadow: 1px 3px 12px 3px variables.$color-button5;
+      box-shadow: 1px 3px 12px 3px variables.$color-button5;
+      /*  background: linear-gradient(180deg, #e5f0f9 0%, rgba(255, 255, 255, 1) 100%); */
     }
 
     .beerView {
