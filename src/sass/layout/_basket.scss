@@ -13,13 +13,27 @@
   padding-left: 2rem;
   background-color: #fff;
   box-shadow: 0.7px 0.5px 1.6px rgba(0, 0, 0, 0.057), 2.2px 1.6px 5.4px rgba(0, 0, 0, 0.083), 10px 7px 24px rgba(0, 0, 0, 0.14);
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    height: 0;
+    width: 0;
+  }
   h2 {
     font-family: variables.$font-1;
   }
   .emptyBasket {
     text-align: center;
     font-size: 1.3rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-left: -2.5rem;
     color: rgb(58, 58, 58);
   }
@@ -30,6 +44,20 @@
   margin-top: 2rem;
   height: 70vh;
   overflow-y: scroll;
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 10px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: variables.$color-button5;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
 }
 
 .paymentLine {
