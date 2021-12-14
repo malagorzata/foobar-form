@@ -1,6 +1,6 @@
 import MobileBasket from "./MobileBasket";
 import { useState } from "react";
-import { getBasketItems, getTotalPrice } from "../features/basket/basketSlice";
+import { getBasketItems } from "../features/basket/basketSlice";
 import { useSelector } from "react-redux";
 
 export default function Nav() {
