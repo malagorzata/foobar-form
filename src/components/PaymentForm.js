@@ -78,7 +78,7 @@ class PaymentForm extends React.Component {
               name="number"
               id="cardnumber"
               placeholder="Enter your card number"
-              type="text"
+              type="tel"
               required
               mask="9999 9999 9999 9999"
               value={this.number}

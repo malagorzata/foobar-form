@@ -15,7 +15,7 @@ main {
 }
 
 .form-control {
-  input:invalid:not(:placeholder-shown) {
+  input:invalid:not(:placeholder-shown, :focus) {
     border: red 2px solid;
   }
 }
