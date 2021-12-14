@@ -148,13 +148,14 @@ main {
     color: red;
   }
 }
-@media (min-width: 320px) and (max-width: 800px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   main {
     grid-column-start: 1;
     grid-column-end: -1;
   }
   #payment_section {
     flex-direction: column;
+    align-items: center;
   }
 
   .form,

@@ -22,7 +22,7 @@ function PaymentBasketItem(props) {
       <div className="orderDetails">
         <h2 className="beerNameOrder">{props.name}</h2>
         <p className="beerPriceOrder">50 DKK</p>
-        <div className="qtCheckout">{props.amount}</div>
+        <div className="qtCheckout">Qt: {props.amount}</div>
       </div>
       <p className="finalBeerPrice">{totalPrice} DKK</p>
     </article>
