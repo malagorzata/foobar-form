@@ -28,13 +28,15 @@
 /* BASKET LIST */
 .basketList {
   margin-top: 2rem;
+  height: 70vh;
+  overflow-y: scroll;
 }
 
 .paymentLine {
   border-bottom: 3px dashed #000;
   width: 90%;
   margin-bottom: 1rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .totalBasket {
@@ -60,8 +62,9 @@
     display: flex;
 
     .deleteItem {
-      position: absolute;
-      right: 2rem;
+      position: relative;
+      left: 18rem;
+      top: 0;
       font-size: 1.8rem;
       cursor: pointer;
       &:hover {
@@ -267,7 +270,7 @@
   .listItem {
     .basketItem {
       .deleteItem {
-        right: 1rem;
+        left: 17rem;
         font-size: 1.5rem;
       }
 
@@ -395,8 +398,8 @@
       display: flex;
 
       .deleteItem {
-        position: absolute;
-        right: 2rem;
+        position: relative;
+        left: 18rem;
         font-size: 1.8rem;
         cursor: pointer;
         &:hover {
@@ -553,7 +556,7 @@
   .listItem {
     .basketItem {
       .deleteItem {
-        right: 1rem;
+        left: 17rem;
         font-size: 1.5rem;
       }
 

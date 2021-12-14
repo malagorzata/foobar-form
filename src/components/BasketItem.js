@@ -22,7 +22,7 @@ export default function BasketItem(props) {
             x
           </div>
           <div className="basketImg">
-            <img src={`../beer-images/${props.basketItem.img}`} />
+            <img src={`../beer-images/${props.basketItem.img}`} alt={`${props.basketItem.img}`} />
           </div>
           <div className="itemInfo">
             <h3>{props.basketItem.name}</h3>

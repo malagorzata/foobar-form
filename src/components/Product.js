@@ -17,7 +17,7 @@ export default function Product(props) {
     <div>
       <article>
         <a className="beerView" onClick={toggleProduct}>
-          <img src={`../beer-images/${props.label}`} alt={props.label} className="beerImage" />
+          <img src={`../beer-images/${props.label}.webp`} alt={props.label} className="beerImage" />
           <h2>{props.name}</h2>
           <div className="beer-price">
             <h3>{props.category}</h3>

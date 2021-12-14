@@ -93,7 +93,7 @@ export default function ProductView(props) {
       </div>
       <div className="productContainer">
         <div className="productPhoto">
-          <img src={`../beer-images/${props.label}`} />
+          <img src={`../beer-images/${props.label}.webp`} alt={props.label} />
         </div>
         <div className="productInfo">
           <h1>{props.name}</h1>
