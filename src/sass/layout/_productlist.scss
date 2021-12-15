@@ -30,6 +30,62 @@ nav {
   }
 }
 
+/* .introBeer {
+  height: 40rem;
+}
+
+.beerGlass {
+  position: absolute;
+  height: 30rem;
+  width: 30rem;
+  top: 10rem;
+  left: 25rem;
+  img {
+    max-width: 100%;
+  }
+}
+
+.beerLiquid {
+  position: absolute;
+  height: 26rem;
+  width: 30rem;
+  top: 10rem;
+  left: 25rem;
+  overflow-y: hidden;
+  img {
+    max-width: 100%;
+  }
+}
+
+.serving {
+  animation-name: serving;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  transform-origin: bottom;
+  animation-timing-function: linear;
+  margin-left: 0.1vw;
+  overflow: hidden;
+}
+
+@keyframes serving {
+  0% {
+    transform: translateY(22rem);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  52% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(22rem);
+  }
+}
+ */
 .ProductList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 50px));
