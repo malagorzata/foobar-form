@@ -18,6 +18,13 @@ main {
   input:invalid:not(:placeholder-shown, :focus) {
     border: red 2px solid;
   }
+
+  input:not(:focus, :placeholder-shown):valid {
+    border: 1px solid #5bc4cf;
+  }
+  input:focus-within {
+    border: 2px black solid;
+  }
 }
 main {
   display: flex;

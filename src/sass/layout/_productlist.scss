@@ -28,12 +28,19 @@
   animation: fillup 4s infinite;
   animation-fill-mode: forwards;
 }
-
+.beer_wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 #Layer_1 {
   width: 30%;
   height: auto;
   margin-left: 35%;
-  top: 0;
+  margin-top: -10%;
+  display: block;
+  // display: inline-block;
+  position: relative;
 }
 
 @keyframes fillup {
@@ -65,8 +72,20 @@
 
 .close {
   position: relative;
-  top: 50%;
-  left: 38rem;
+  left: 43%;
+  top: 30%;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+  border: solid 1px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: variables.$font-1;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 900;
+  z-index: 11;
 }
 .App {
   display: grid;
@@ -180,5 +199,30 @@ nav {
     padding: 0.3rem 2rem;
     margin: 0 1rem;
     color: 242424;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  #Layer_1 {
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+    margin-top: -10%;
+  }
+  .close {
+    position: relative;
+    left: 33%;
+    top: 30%;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 5rem;
+    border: solid 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: variables.$font-1;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 900;
+    z-index: 11;
   }
 }
