@@ -7,7 +7,7 @@ export default function PaymentOrder() {
   return (
     <div className="allOrders">
       {basketItems.map((basketItem) => (
-        <PaymentBasketItem {...basketItem} />
+        <PaymentBasketItem {...basketItem} key={basketItem.name} />
       ))}
     </div>
   );

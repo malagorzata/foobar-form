@@ -38,7 +38,7 @@ export default function PaymentSection(props) {
             navigate("/ordercompleted");
           }}
         >
-          <div class="form">
+          <div className="form">
             <PaymentForm />
             <button type="submit" className="payNow">
               PAY NOW

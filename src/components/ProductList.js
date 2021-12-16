@@ -3,7 +3,7 @@ import Nav from "./Nav";
 import React, { useState } from "react";
 
 export default function ProductList(props) {
-  const mapped = props.products.map((product) => <Product {...product} key={product.name} addToBasket={props.addToBasket} key={props.name} />);
+  const mapped = props.products.map((product) => <Product {...product} key={product.name} addToBasket={props.addToBasket} />);
   const [modal, showModal] = useState(true);
   const toggleProduct = () => {
     showModal(!modal);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { removeItemFromBasket, minus, plus } from "../features/basket/basketSlice";
 
@@ -22,7 +22,7 @@ export default function BasketItem(props) {
             x
           </div>
           <div className="basketImg">
-            <img src={`../beer-images/${props.basketItem.img}`} />
+            <img src={`../beer-images/${props.basketItem.img}`} alt={props.basketItem.name} />
           </div>
           <div className="itemInfo">
             <h3>{props.basketItem.name}</h3>
