@@ -11,15 +11,9 @@ export const slice = createSlice({
 
       //check if this item is already in the basket
       const itemInBasket = state.basketItems.find((basketItem) => basketItem.name === action.payload.basketItemName);
-      //console.log(itemInBasket);
-      //console.log(action.payload.basketItemName);
-      //console.log(basketItem.props.name);
-      //console.log(basketItem.amount);
 
       if (itemInBasket) {
         //if it is, add to the amount
-        //console.log(itemInBasket.amount);
-        //console.log(basketItem.amount);
         itemInBasket.amount = itemInBasket.amount + basketItem.amount;
       } else {
         //if it's not, add new item to basket
