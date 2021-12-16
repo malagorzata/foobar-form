@@ -1,10 +1,23 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { getBasketItems } from "../features/basket/basketSlice";
+import { useSelector } from "react-redux";
 
 export default function PaymentMethod(props) {
+  const basketItems = useSelector(getBasketItems);
+
   const [selected, setSelected] = useState({
     activeObject: null,
   });
+
+  function disable(e) {
+    let pointerEvents = "";
+    if (basketItems.length === 0) {
+      e.preventDefault();
+    } else {
+      pointerEvents = "initial";
+    }
+  }
 
   function toggleSelected(e) {
     console.log(e.target.id);
@@ -18,6 +31,7 @@ export default function PaymentMethod(props) {
     }
   }
 
+  console.log(basketItems.length);
   /* function toggleSelectedStyles(element) {
     console.log(element.target.id);
     console.log(selected.activeObject);
@@ -93,8 +107,9 @@ export default function PaymentMethod(props) {
           <p>MobilePay</p>
         </div>
       </div>
-      <Link className="checkoutBtn" to="/payment">
-        Checkout
+
+      <Link className="checkoutBtn" to="/payment" onClick={disable}>
+        CHECKOUT
       </Link>
     </div>
   );

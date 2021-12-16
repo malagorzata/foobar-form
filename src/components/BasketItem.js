@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { removeItemFromBasket, minus, plus } from "../features/basket/basketSlice";
 

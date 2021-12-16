@@ -7,7 +7,7 @@ export default function PaymentOrder() {
   return (
     <div className="allOrders">
       {basketItems.map((basketItem) => (
-        <PaymentBasketItem {...basketItem} />
+        <PaymentBasketItem {...basketItem} key={basketItem.name} />
       ))}
     </div>
   );
@@ -22,7 +22,8 @@ function PaymentBasketItem(props) {
       <div className="orderDetails">
         <h2 className="beerNameOrder">{props.name}</h2>
         <p className="beerPriceOrder">40 DKK</p>
-        <div className="qtCheckout">{props.amount}</div>
+
+        <div className="qtCheckout">Qt: {props.amount}</div>
       </div>
       <p className="finalBeerPrice">{totalPrice} DKK</p>
     </article>

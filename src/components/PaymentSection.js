@@ -31,13 +31,14 @@ export default function PaymentSection(props) {
       <div id="payment_section">
         <CheckoutView {...props} />
         <form
+          autoComplete="off"
           onSubmit={(e) => {
             e.preventDefault();
             orderSubmit(PostOrders);
             navigate("/ordercompleted");
           }}
         >
-          <div class="form">
+          <div className="form">
             <PaymentForm />
             <button type="submit" className="payNow">
               PAY NOW

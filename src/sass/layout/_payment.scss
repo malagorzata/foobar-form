@@ -14,6 +14,18 @@ main {
   display: none;
 }
 
+.form-control {
+  input:invalid:not(:placeholder-shown, :focus) {
+    border: red 2px solid;
+  }
+
+  input:not(:focus, :placeholder-shown):valid {
+    border: 1px solid #5bc4cf;
+  }
+  input:focus-within {
+    border: 2px black solid;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
@@ -137,14 +149,20 @@ main {
     margin-top: 1rem;
   }
 }
-
-@media (min-width: 320px) and (max-width: 800px) {
+.card_container {
+  p {
+    font-size: 0.8rem;
+    color: red;
+  }
+}
+@media (min-width: 320px) and (max-width: 1024px) {
   main {
     grid-column-start: 1;
     grid-column-end: -1;
   }
   #payment_section {
     flex-direction: column;
+    align-items: center;
   }
 
   .form,

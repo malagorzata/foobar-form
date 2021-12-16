@@ -13,6 +13,20 @@
   height: 19rem;
   border-radius: 10px;
   border: 0.5px solid variables.$color-button;
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 10px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
 }
 .fullOrder {
   display: grid;
@@ -35,7 +49,8 @@
     grid-column-start: 2;
     grid-column-end: 4;
 
-    .beerPriceOrder {
+    .beerPriceOrder,
+    .qtCheckout {
       font-family: variables.$font-1;
       font-weight: normal;
       font-size: 0.8rem;

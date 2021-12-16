@@ -6,7 +6,7 @@
   border: none;
   background-color: white;
   border-radius: 5px;
-  border: 2px solid variables.$color-button6;
+  border: 1px solid #caabff;
   margin: 0.5rem 0 1rem 0;
   font-family: variables.$font-1;
   color: black;
@@ -15,7 +15,9 @@
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: variables.$color-button5;
+    border: 1px solid #caabff;
+    background-color: #caabff;
+    color: white;
   }
 }
 .payNow {
