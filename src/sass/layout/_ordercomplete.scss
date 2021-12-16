@@ -2,19 +2,12 @@
   display: flex;
   flex-direction: row;
   margin: 0;
-  margin-right: 50rem;
-  position: absolute;
-  top: 15rem;
-  left: 10rem;
+  position: relative;
+  top: -20rem;
+  left: -20rem;
   z-index: -1;
 }
 
-.introBeer {
-  height: 40rem;
-  animation-name: cheers;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
 .beer-right,
 .beer-left {
   height: 40rem;
@@ -119,15 +112,15 @@
     transform: translateY(15rem);
   }
 }
-@media (min-width: 320px) and (max-width: 1024px) {
+
+@media only screen and (max-width: 1025px) {
   .beers {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    margin-right: 50rem;
-    position: absolute;
-    top: 15rem;
+    left: -19rem;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .beers {
     left: -22rem;
-    z-index: -1;
   }
 }
