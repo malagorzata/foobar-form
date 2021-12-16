@@ -20,7 +20,7 @@ export default function PaymentMethod(props) {
       <h2>Payment Method</h2>
       <div className="methods">
         <div className="cardP">
-          <button id="cardBtn" className={selected} onClick={toggleSelected}>
+          <button id="cardBtn">
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g>
                 <path
@@ -41,7 +41,7 @@ export default function PaymentMethod(props) {
           <p>Credit card</p>
         </div>
         <div className="contactless">
-          <button id="contaclessBtn" className={selected} onClick={toggleSelected}>
+          <button id="contaclessBtn">
             <svg width="21" height="28" viewBox="0 0 21 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 fillRule="evenodd"
@@ -54,7 +54,7 @@ export default function PaymentMethod(props) {
           <p>Contactless</p>
         </div>
         <div className="mpP">
-          <button id="mbpBtn" className={selected} onClick={toggleSelected}>
+          <button id="mbpBtn">
             <svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0)">
                 <path

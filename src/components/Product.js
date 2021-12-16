@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { addItemToBasket } from "../features/basket/basketSlice";
 
 export default function Product(props) {
+  const dispatch = useDispatch();
+
   /* for showing the selected product */
 
   const [shown, showProduct] = useState(false);
@@ -26,7 +28,7 @@ export default function Product(props) {
           <button
             className="addToBasket"
             onClick={() => {
-              dispatch(addItemToBasket({ props, amount, basketItemName: props.name }));
+              dispatch(addItemToBasket({ props, basketItemName: props.name }));
             }}
           >
             ADD TO BASKET

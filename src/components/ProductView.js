@@ -19,7 +19,6 @@ export default function ProductView(props) {
     } else if (props.name === "Fairy Tale Ale") {
       color = "#EFACFF";
       button = "#F4C9FF";
-      buttonHover = "#DCAEE8";
       gradientColor = "linear-gradient(180deg, #F9E1FF 0%, rgba(255, 255, 255, 1) 100%)";
     } else if (props.name === "Row 26") {
       color = "#AEC1FF";
