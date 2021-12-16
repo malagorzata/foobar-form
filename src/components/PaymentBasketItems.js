@@ -4,7 +4,6 @@ import { getTotalPrice } from "../features/basket/basketSlice";
 import { useSelector } from "react-redux";
 
 export default function PaymentBasketItems(props) {
-  // const basketItems = useSelector(getBasketItems);
   const totalPrice = useSelector(getTotalPrice);
 
   return (

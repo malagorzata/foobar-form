@@ -6,10 +6,6 @@ import { useSelector } from "react-redux";
 export default function PaymentMethod(props) {
   const basketItems = useSelector(getBasketItems);
 
-  const [selected, setSelected] = useState({
-    activeObject: null,
-  });
-
   function disable(e) {
     let pointerEvents = "";
     if (basketItems.length === 0) {
@@ -18,30 +14,6 @@ export default function PaymentMethod(props) {
       pointerEvents = "initial";
     }
   }
-
-  function toggleSelected(e) {
-    console.log(e.target.id);
-    setSelected({ ...selected, activeObject: e.target.id });
-    console.log(selected.activeObject);
-
-    if (e.target.id === selected.activeObject) {
-      return "selected";
-    } else {
-      return "notSelected";
-    }
-  }
-
-  console.log(basketItems.length);
-  /* function toggleSelectedStyles(element) {
-    console.log(element.target.id);
-    console.log(selected.activeObject);
-
-    if (element.target.id === selected.activeObject) {
-      return "selected";
-    } else {
-      return "notSelected";
-    }
-  } */
 
   return (
     <div className="paymentMethod">

@@ -1,7 +1,6 @@
 import BasketItem from "./BasketItem";
 import { useSelector } from "react-redux";
 import { getBasketItems, getTotalPrice } from "../features/basket/basketSlice";
-//import { basketAmount } from "./BasketItem";
 
 export default function MyBasket(props) {
   const basketItems = useSelector(getBasketItems);

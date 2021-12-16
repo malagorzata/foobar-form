@@ -179,7 +179,7 @@ nav {
  */
 .ProductList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 50px));
+  grid-template-columns: repeat(auto-fill, minmax(50px, 260px));
   padding-left: 2rem;
   margin-top: 1.2rem;
 
@@ -287,7 +287,7 @@ nav {
 
   .ProductList {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 50px));
+    grid-template-columns: repeat(auto-fill, minmax(50px, 240px));
   }
 
   .ProductList article .beerView h3 {
@@ -310,7 +310,7 @@ nav {
   }
 
   .ProductList {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 50px));
+    grid-template-columns: repeat(auto-fill, minmax(50px, 200px));
     padding-left: 0;
     justify-content: center;
   }
@@ -357,7 +357,7 @@ nav {
 
 @media only screen and (max-width: 376px) {
   .ProductList {
-    grid-template-columns: repeat(auto-fill, minmax(290px, 50px));
+    grid-template-columns: repeat(auto-fill, minmax(50px, 290px));
   }
 }
 @media (min-width: 320px) and (max-width: 600px) {
