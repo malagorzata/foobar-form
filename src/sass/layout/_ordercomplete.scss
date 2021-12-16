@@ -4,8 +4,8 @@
   margin: 0;
   margin-right: 50rem;
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 15rem;
+  left: 10rem;
   z-index: -1;
 }
 
@@ -117,5 +117,17 @@
   }
   100% {
     transform: translateY(15rem);
+  }
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  .beers {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-right: 50rem;
+    position: absolute;
+    top: 15rem;
+    left: -22rem;
+    z-index: -1;
   }
 }
