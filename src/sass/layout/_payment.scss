@@ -122,10 +122,10 @@ main {
 }
 
 .circle {
-  background: linear-gradient(180deg, rgba(255, 143, 143, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  width: 15rem;
-  height: 15rem;
-  border-radius: 200%;
+  // background: linear-gradient(180deg, rgba(255, 143, 143, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  // width: 15rem;
+  // height: 15rem;
+  // border-radius: 200%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -139,14 +139,25 @@ main {
 
 .ordercompleted {
   text-align: center;
-  font-family: variables.$font-1;
-  line-height: 3rem;
+  line-height: 4rem;
+  z-index: 10;
   h1 {
     font-family: variables.$font-2;
     letter-spacing: 1px;
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-family: variables.$font-1;
+    font-size: 2rem;
+    margin-bottom: 4rem;
   }
   p {
-    margin-top: 1rem;
+    margin-top: 3.5rem;
+    font-family: variables.$font-1;
+    font-size: 1.5rem;
+    max-width: 30rem;
+    line-height: 2.5rem;
   }
 }
 .card_container {

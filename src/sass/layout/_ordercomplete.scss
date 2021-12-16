@@ -1,0 +1,121 @@
+.beers {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin-right: 50rem;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  z-index: -1;
+}
+
+.introBeer {
+  height: 40rem;
+  animation-name: cheers;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.beer-right,
+.beer-left {
+  height: 40rem;
+  animation-duration: 3.3s;
+  animation-iteration-count: infinite;
+}
+.beer-right {
+  animation-name: tilt-right;
+  margin: 0 5rem;
+  .beerGlass {
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    top: 3rem;
+    left: 22rem;
+    img {
+      max-width: 100%;
+    }
+  }
+  .beerLiquid {
+    position: absolute;
+    height: 8rem;
+    width: 10rem;
+    top: 3rem;
+    left: 22rem;
+    overflow-y: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.beer-left {
+  margin: 0 5rem;
+  animation-name: tilt-left;
+  .beerGlass {
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    top: 0rem;
+    left: 18rem;
+    img {
+      max-width: 100%;
+    }
+  }
+  .beerLiquid {
+    position: absolute;
+    height: 8rem;
+    width: 10rem;
+    top: 0rem;
+    left: 18rem;
+    overflow-y: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@keyframes tilt-left {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes tilt-right {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.serving {
+  animation-name: serving;
+  animation-duration: 3.3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  transform-origin: bottom;
+  animation-timing-function: linear;
+  margin-left: 0.1vw;
+  overflow: hidden;
+}
+@keyframes serving {
+  0% {
+    transform: translateY(15rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  52% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15rem);
+  }
+}
