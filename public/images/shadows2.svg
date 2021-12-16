@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 805 860">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0.15;
+      }
+
+      .cls-2 {
+        opacity: 0.06;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="shadows">
+      <rect class="cls-1" x="576" y="50.84" width="122.5" height="758.32" transform="translate(1274.5 860) rotate(-180)"/>
+      <rect class="cls-1" x="576" y="50.84" width="55.77" height="758.32" transform="translate(1207.77 860) rotate(-180)"/>
+      <rect class="cls-2" x="286.31" y="50.84" width="151.65" height="758.32" transform="translate(724.26 860) rotate(-180)"/>
+    </g>
+  </g>
+</svg>

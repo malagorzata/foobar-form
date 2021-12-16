@@ -29,9 +29,9 @@ export const slice = createSlice({
 
         state.basketItems.push({
           id: id,
-          img: action.payload.props.label,
+          img: `${action.payload.props.label}.webp`,
           name: action.payload.props.name,
-          price: 50,
+          price: 40,
           amount: action.payload.amount,
         });
       }
