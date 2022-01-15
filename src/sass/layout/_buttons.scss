@@ -2,7 +2,8 @@
 
 .addToBasket,
 .payNow,
-.editOrder {
+.editOrder,
+.startOrder {
   border: none;
   background-color: white;
   border-radius: 5px;
@@ -19,6 +20,18 @@
     background-color: #caabff;
     color: white;
   }
+}
+
+.startOrder {
+  padding: 1.3rem 1.5rem;
+  font-size: 2.5rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+.orderButton {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .payNow {
   width: 8rem;

@@ -1,11 +1,10 @@
 import "./sass/style.scss";
 import { useState, useEffect } from "react";
-import ProductList from "./components/ProductList";
-import Basket from "./components/Basket";
 import { Routes, Route } from "react-router-dom";
 import PaymentSection from "./components/PaymentSection";
 import OrderCompleted from "./components/OrderCompleted";
 import WelcomeScreen from "./components/WelcomeScreen";
+import Wrapper from "./components/Wrapper";
 
 function App() {
   // const [products, setProducts] = useState([]);
@@ -34,7 +33,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Wrapper tap={productCopy} basket={basket} />} />
+        <Route path="/" element={<WelcomeScreen />} />
+        <Route path="/wrapper" element={<Wrapper tap={productCopy} basket={basket} />} />
         <Route path="/payment" element={<PaymentSection basket={basket} setBasket={setBasket} setOrderID={setOrderID} orderID={orderID} />} />
         <Route path="/ordercompleted" element={<OrderCompleted orderID={orderID} />} />
         <Route path="/welcomescreen" element={<WelcomeScreen />} />
@@ -42,13 +42,5 @@ function App() {
     </div>
   );
 }
-const Wrapper = (props) => {
-  // console.log(props);
-  return (
-    <>
-      <ProductList products={props.tap} />
-      <Basket basket={props.basket} />
-    </>
-  );
-};
+
 export default App;
