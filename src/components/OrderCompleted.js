@@ -1,4 +1,6 @@
 import Nav from "./Nav";
+import { Link } from "react-router-dom";
+
 function OrderCompleted(props) {
   return (
     <div id="order_completed">
@@ -10,7 +12,6 @@ function OrderCompleted(props) {
           <h1>Thank you for your order!</h1>
           <h2>Your order number is:</h2>
           <div className="circle">#{props.orderID}</div>
-
           <p>We have now received your order - please check the queue to see when to pick it up!</p>
         </div>
         <div className="beers">
@@ -37,6 +38,11 @@ function OrderCompleted(props) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="orderButton">
+        <Link to="/" className="orderMore">
+          ORDER MORE
+        </Link>
       </div>
     </div>
   );
