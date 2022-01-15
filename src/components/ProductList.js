@@ -14,7 +14,7 @@ export default function ProductList(props) {
       <Nav />
       <h1>Order your favourite beer</h1>
       <h2>Beer is served from the tap in a glass</h2>
-
+      <Link to="/welcomescreen">EDIT ORDER</Link>
       <section className="ProductList">{mapped}</section>
     </section>
   );

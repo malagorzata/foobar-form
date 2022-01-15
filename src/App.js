@@ -5,6 +5,7 @@ import Basket from "./components/Basket";
 import { Routes, Route } from "react-router-dom";
 import PaymentSection from "./components/PaymentSection";
 import OrderCompleted from "./components/OrderCompleted";
+import WelcomeScreen from "./components/WelcomeScreen";
 
 function App() {
   // const [products, setProducts] = useState([]);
@@ -36,6 +37,7 @@ function App() {
         <Route path="/" element={<Wrapper tap={productCopy} basket={basket} />} />
         <Route path="/payment" element={<PaymentSection basket={basket} setBasket={setBasket} setOrderID={setOrderID} orderID={orderID} />} />
         <Route path="/ordercompleted" element={<OrderCompleted orderID={orderID} />} />
+        <Route path="/welcomescreen" element={<WelcomeScreen />} />
       </Routes>
     </div>
   );
