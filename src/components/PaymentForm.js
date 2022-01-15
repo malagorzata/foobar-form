@@ -64,6 +64,7 @@ class PaymentForm extends React.Component {
         <div className="">
           <Cards cvc={this.state.cvc} expiry={this.state.expiry} focused={this.state.focus} name={this.state.name} number={this.state.number} />
         </div>
+
         <div className="card_container">
           <div className="form-control">
             <label htmlFor="name">Name on the card</label>
@@ -100,6 +101,7 @@ class PaymentForm extends React.Component {
                 placeholder="MM/YY"
                 maskChar=""
                 required
+                pattern="(?:0[1-9]|1[0-2])/2[2-9]"
                 value={this.monthyear}
                 onBlur={this.handleDateValid}
                 onChange={this.handleInputChange}
@@ -113,6 +115,15 @@ class PaymentForm extends React.Component {
               <input type="tel" minLength="3" maxLength="3" name="cvc" className="form-control" placeholder="CVC" pattern="\d{3,4}" required onChange={this.handleInputChange} onFocus={this.handleInputFocus} onBlur={this.handleCVCValid} />
               <p className={`${this.state.cvcValid ? "hidden" : "errormessage"}`}>Enter CVC code</p>
             </div>
+          </div>
+        </div>
+        <div className="cardsAccepted">
+          <h2>WE ACCEPT:</h2>
+          <div className="allCards">
+            <img className="card" src="../images/visa.png" alt="visa" />
+            <img className="card" src="../images/mastercard.png" alt="mastercard" />
+            <img className="card" src="../images/american-express.png" alt="AE" />
+            <img className="card" src="../images/paypal.png" alt="PayPal" />
           </div>
         </div>
       </div>
