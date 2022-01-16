@@ -79,6 +79,7 @@ class PaymentForm extends React.Component {
               name="number"
               id="cardnumber"
               placeholder="Enter your card number"
+              className={`${this.state.cardnumberValid ? "" : "invalid"}`}
               type="tel"
               required
               mask="9999 9999 9999 9999"
@@ -99,6 +100,7 @@ class PaymentForm extends React.Component {
                 mask="99/99"
                 type="text"
                 placeholder="MM/YY"
+                className={`${this.state.dateValid ? "" : "invalid"}`}
                 maskChar=""
                 required
                 pattern="(?:0[1-9]|1[0-2])/2[2-9]"

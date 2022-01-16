@@ -41,7 +41,9 @@ main {
 }
 
 .form-control {
-  input:invalid:not(:placeholder-shown, :focus) {
+  input:invalid:not(:placeholder-shown, :focus),
+  #monthyear.invalid,
+  #cardnumber.invalid {
     border: red 2px solid;
   }
 
