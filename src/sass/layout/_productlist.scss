@@ -9,41 +9,6 @@
   display: grid;
   grid-template-columns: 78vw 22vw;
 }
-// Welcome Screen
-.WelcomeScreen {
-  padding-top: 7rem;
-  background: linear-gradient(180deg, #fdeebb 0%, rgba(255, 255, 255, 1) 100%);
-  width: 100vw;
-  z-index: 2;
-
-  .manual {
-    z-index: 1;
-  }
-
-  h1 {
-    font-size: 9rem;
-    font-family: variables.$font-2;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  ul {
-    list-style-type: none;
-    text-align: center;
-    font-family: variables.$font-1;
-    margin: 0;
-    padding: 0;
-    li {
-      font-size: 2rem;
-    }
-  }
-
-  h2 {
-    font-family: variables.$font-2;
-    text-align: center;
-    font-size: 3rem;
-  }
-}
 
 nav {
   padding: 1.5rem;
