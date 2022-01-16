@@ -109,3 +109,26 @@
     }
   }
 }
+
+.noshow {
+  display: block;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .WelcomeScreen {
+    h1 {
+      margin-bottom: 0.2rem;
+    }
+    .steps {
+      flex-direction: column;
+      align-items: center;
+
+      .step {
+        width: 15rem;
+      }
+    }
+  }
+  .noshow {
+    display: none;
+  }
+}

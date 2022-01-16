@@ -79,3 +79,11 @@
     transform: scale(1);
   }
 }
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .startOrder {
+    margin-top: 1rem;
+
+    font-size: 1rem;
+  }
+}

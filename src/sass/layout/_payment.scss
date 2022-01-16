@@ -125,6 +125,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 0.5fr;
     grid-gap: 0.5rem;
+    height: 5rem;
     input[name="expiry"] {
       width: 6rem;
     }

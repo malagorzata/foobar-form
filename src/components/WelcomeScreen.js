@@ -8,24 +8,24 @@ export default function WelcomeScreen() {
         <div className="step one">
           <h1>Step 1</h1>
 
-          <img src="../images/beer.png" alt="beer"></img>
+          <img className="noshow" src="../images/beer.png" alt="beer"></img>
           <h2>CHOOSE YOUR BEER</h2>
         </div>
         <div className="step two">
           <h1>Step 2</h1>
-          <img src="../images/shopping-cart.png" alt="shopping cart"></img>
+          <img className="noshow" src="../images/shopping-cart.png" alt="shopping cart"></img>
           <h2>ADD TO BASKET</h2>
         </div>
         <div className="step three">
           <h1>Step 3</h1>
 
-          <img src="../images/credit-card.png" alt="credit card"></img>
+          <img className="noshow" src="../images/credit-card.png" alt="credit card"></img>
           <h2>PICK YOUR PAYMENT</h2>
         </div>
         <div className="step four">
           <h1>Step 4</h1>
 
-          <img src="../images/hashtags.png" alt="hashtags"></img>
+          <img className="noshow" src="../images/hashtags.png" alt="hashtags"></img>
           <h2>GRAB YOUR ORDER AT THE BAR</h2>
         </div>
       </section>
@@ -34,17 +34,6 @@ export default function WelcomeScreen() {
           START YOUR ORDER
         </Link>
       </div>
-      {/* <div className="beer-middle">
-        <div className="beerGlass">
-          <img src="../images/glass2.svg" alt="beer glass" />
-        </div>
-        <div className="beerLiquid">
-          <img className="serving" src="../images/beer2.svg" alt="beer" />
-        </div>
-        <div className="beerGlass">
-          <img src="../images/shadows2.svg" alt="beer glass" />
-        </div>
-      </div> */}
     </div>
   );
 }
